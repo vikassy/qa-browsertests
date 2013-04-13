@@ -1,7 +1,8 @@
 Feature: Math
 
   Scenario: Display simple math
-    Given I am editing My sandbox page
+    Given I am logged in
+      And I am editing page that does not exist
     When I type <math>3 + 2</math>
       And I click Preview
     Then My sandbox page should contain an img tag

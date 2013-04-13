@@ -1,6 +1,7 @@
 
-Given /^I am editing My sandbox page$/ do
-  visit(MainPage).my_sandbox
+Given(/^I am editing page that does not exist$/) do
+  step 'I am at page that does not exist'
+  step 'I click link Create'
 end
 
 When /^I type (.+)$/ do |write_text|
