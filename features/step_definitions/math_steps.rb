@@ -12,7 +12,7 @@ When /^I click Preview$/ do
   on(EditPage).preview
 end
 
-Then /^My sandbox page should contain an img tag$/ do
+Then /^the page should contain an img tag$/ do
   on(EditPage).math_image_element.should exist
 end
 
