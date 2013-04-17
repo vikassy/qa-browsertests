@@ -86,6 +86,7 @@
       - test2.wikipedia.org
       - commons.wikimedia.beta.wmflabs.org
       - sandbox.translatewiki.net
+      - en.wikipedia.org
 
 ## Jelly-based transformation
 
