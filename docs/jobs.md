@@ -1,6 +1,6 @@
 # browsertests-commons.wikimedia.beta.wmflabs.org-linux-chrome
 - Browser Label: chrome
-- bundle exec: parallel_cucumber features/upload_wizard.feature -n 1 --test-options '--profile ci'
+- bundle exec: parallel_cucumber features/create_account.feature features/file.feature features/search.feature features/upload_wizard.feature -n 4 --test-options '--profile ci'
 - Recipients: zfilipin@wikimedia.org cmcmahon@wikimedia.org
 - Repository URL: browsertests@gerrit
 - Branch: master
