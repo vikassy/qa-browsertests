@@ -24,7 +24,7 @@
 
 # browsertests-sandbox.translatewiki.net-linux-firefox
 - Browser Label: firefox
-- bundle exec: parallel_cucumber features/accept_language.feature features/universal_language_selector.feature -n 2 --test-options '--profile ci'
+- bundle exec: parallel_cucumber features/accept_language.feature features/create_account.feature features/universal_language_selector.feature -n 3 --test-options '--profile ci'
 - Recipients: zfilipin@wikimedia.org cmcmahon@wikimedia.org
 - Repository URL: browsertests@gerrit
 - Branch: master
