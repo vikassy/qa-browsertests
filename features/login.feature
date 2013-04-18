@@ -12,17 +12,17 @@ Feature: Log in
   Scenario: Log in without entering credentials
     When I log in without entering credentials
     Then Log in page should open
-      And feedback should be You have not specified a valid username.
+      And feedback should be You have not specified a valid user name.
 
   Scenario: Log in without entering password
     When I log in without entering password
     Then Log in page should open
-      And feedback should be Password entered was blank. Please try again.
+      And feedback should be The password field was empty. Please try again.
 
   Scenario: Log in with incorrect username
     When I log in with incorrect username
     Then Log in page should open
-    And feedback should be There is no user by the name "incorrect username". Usernames are case sensitive. Check your spelling, or create a new account.
+    And feedback should be There is no user by the name "incorrect username". Check your spelling, or go to Wikipedia's signup page to create a new user account.
 
   Scenario: Log in with incorrect password
     When I log in with incorrect password
@@ -32,5 +32,4 @@ Feature: Log in
   @login
   Scenario: Log in with valid credentials
     When Log in as Selenium_user
-    Then main page should open
-      And there should be text Selenium user
+    Then there should be text Selenium user
