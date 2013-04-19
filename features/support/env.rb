@@ -31,7 +31,13 @@ def local_browser(language)
   if language == 'default'
     Watir::Browser.new browser_label
   else
-    profile = Selenium::WebDriver::Firefox::Profile.new
+    if browser_label == :firefox
+      profile = Selenium::WebDriver::Firefox::Profile.new
+    elsif browser_label == :chrome
+      profile = Selenium::WebDriver::Chrome::Profile.new
+    else
+      raise "Changing default language is currently supported only for Firefox and Chrome!"
+    end
     profile['intl.accept_languages'] = language
     Watir::Browser.new browser_label, :profile => profile
   end
