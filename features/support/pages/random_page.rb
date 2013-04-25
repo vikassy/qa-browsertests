@@ -12,6 +12,7 @@ class RandomPage
   page_url url
 
   li(:main_page, id: 'n-mainpage-description')
+  a(:download_as_pdf, text: 'Download as PDF')
   a(:uls_trigger, class: 'uls-trigger')
   div(:search, id: 'search')
   text_field(:search_input, id: 'searchInput')
