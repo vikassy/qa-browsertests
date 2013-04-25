@@ -36,8 +36,7 @@
 
 
 # browsertests-en.wikipedia.beta.wmflabs.org
-
-- bundle exec: parallel_cucumber features/aftv5.feature features/create_account.feature features/file.feature features/page_edit.feature features/page_triage.feature features/preferences_appearance.feature features/search.feature -n 7 --test-options '--profile ci'
+- bundle exec: parallel_cucumber features/aftv5.feature features/create_account.feature features/file.feature features/page_edit.feature features/page_triage.feature features/pdf.feature features/preferences_appearance.feature features/search.feature -n 8 --test-options '--profile ci'
 - MediaWiki URL: en.wikipedia.beta.wmflabs.or
 
 
@@ -49,15 +48,15 @@
 
 ## browsertests-en.wikipedia.beta.wmflabs.org-windows-internet_explorer_6
 - Browser Label: internet_explorer_6
-- bundle exec: parallel_cucumber features/aftv5.feature features/create_account.feature features/file.feature features/page_edit.feature features/page_triage.feature features/preferences_appearance.feature features/search.feature -n 7 --test-options '--profile ci --tags ~@ie6-bug'
+- bundle exec: parallel_cucumber features/aftv5.feature features/create_account.feature features/file.feature features/page_edit.feature features/page_triage.feature features/pdf.feature features/preferences_appearance.feature features/search.feature -n 8 --test-options '--profile ci --tags ~@ie6-bug'
 
 ## browsertests-en.wikipedia.beta.wmflabs.org-windows-internet_explorer_7
 - Browser Label: internet_explorer_7
-- bundle exec: parallel_cucumber features/aftv5.feature features/create_account.feature features/file.feature features/page_edit.feature features/page_triage.feature features/preferences_appearance.feature features/search.feature -n 7 --test-options '--profile ci --tags ~@ie7-bug'
+- bundle exec: parallel_cucumber features/aftv5.feature features/create_account.feature features/file.feature features/page_edit.feature features/page_triage.feature features/pdf.feature features/preferences_appearance.feature features/search.feature -n 8 --test-options '--profile ci --tags ~@ie7-bug'
 
 ## browsertests-en.wikipedia.beta.wmflabs.org-windows-internet_explorer_8
 - Browser Label: internet_explorer_8
-- bundle exec: parallel_cucumber features/aftv5.feature features/create_account.feature features/file.feature features/page_edit.feature features/page_triage.feature features/preferences_appearance.feature features/search.feature -n 7 --test-options '--profile ci --tags ~@ie8-bug'
+- bundle exec: parallel_cucumber features/aftv5.feature features/create_account.feature features/file.feature features/page_edit.feature features/page_triage.feature features/pdf.feature features/preferences_appearance.feature features/search.feature -n 8 --test-options '--profile ci --tags ~@ie8-bug'
 
 ## browsertests-en.wikipedia.beta.wmflabs.org-windows-internet_explorer_9
 - Browser Label: internet_explorer_9
@@ -65,7 +64,7 @@
 
 
 # browsertests-en.wikipedia.org-linux-firefox
-- bundle exec: parallel_cucumber features/create_account.feature features/math.feature features/page_triage.feature features/preferences_appearance.feature -n 4 --test-options '--profile ci'
+- bundle exec: parallel_cucumber features/create_account.feature features/math.feature features/page_triage.feature features/pdf.feature features/preferences_appearance.feature -n 5 --test-options '--profile ci'
 - MediaWiki URL: en.wikipedia.org
 
 
@@ -77,15 +76,15 @@
 
 ## browsertests-en.wikipedia.org-windows-internet_explorer_6
 - Browser Label: internet_explorer_6
-- bundle exec: parallel_cucumber features/create_account.feature features/math.feature features/page_triage.feature features/preferences_appearance.feature -n 4 --test-options '--profile ci --tags ~@ie6-bug'
+- bundle exec: parallel_cucumber features/create_account.feature features/math.feature features/page_triage.feature features/pdf.feature features/preferences_appearance.feature -n 5 --test-options '--profile ci --tags ~@ie6-bug'
 
 ## browsertests-en.wikipedia.org-windows-internet_explorer_7
 - Browser Label: internet_explorer_7
-- bundle exec: parallel_cucumber features/create_account.feature features/math.feature features/page_triage.feature features/preferences_appearance.feature -n 4 --test-options '--profile ci --tags ~@ie7-bug'
+- bundle exec: parallel_cucumber features/create_account.feature features/math.feature features/page_triage.feature features/pdf.feature features/preferences_appearance.feature -n 5 --test-options '--profile ci --tags ~@ie7-bug'
 
 ## browsertests-en.wikipedia.org-windows-internet_explorer_8
 - Browser Label: internet_explorer_8
-- bundle exec: parallel_cucumber features/create_account.feature features/math.feature features/page_triage.feature features/preferences_appearance.feature -n 4 --test-options '--profile ci --tags ~@ie8-bug'
+- bundle exec: parallel_cucumber features/create_account.feature features/math.feature features/page_triage.feature features/pdf.feature features/preferences_appearance.feature -n 5 --test-options '--profile ci --tags ~@ie8-bug'
 
 ## browsertests-en.wikipedia.org-windows-internet_explorer_9
 - Browser Label: internet_explorer_9
@@ -121,7 +120,7 @@
 
 # browsertests-test2.wikipedia.org
 
-- bundle exec: parallel_cucumber features/create_account.feature features/file.feature features/guided_tour.feature features/login.feature features/math.feature features/page.feature features/page_edit.feature features/page_triage.feature features/search.feature features/upload_wizard.feature -n 10 --test-options '--profile ci'
+- bundle exec: parallel_cucumber features/create_account.feature features/file.feature features/guided_tour.feature features/login.feature features/math.feature features/page.feature features/page_edit.feature features/page_triage.feature features/pdf.feature features/search.feature features/upload_wizard.feature -n 11 --test-options '--profile ci'
 - MediaWiki URL: test2.wikipedia.org
 
 
@@ -133,15 +132,15 @@
 
 ## browsertests-test2.wikipedia.org-windows-internet_explorer_6
 - Browser Label: internet_explorer_6
-- bundle exec: parallel_cucumber features/create_account.feature features/file.feature features/guided_tour.feature features/login.feature features/math.feature features/page.feature features/page_edit.feature features/page_triage.feature features/search.feature features/upload_wizard.feature -n 10 --test-options '--profile ci --tags ~@ie6-bug'
+- bundle exec: parallel_cucumber features/create_account.feature features/file.feature features/guided_tour.feature features/login.feature features/math.feature features/page.feature features/page_edit.feature features/page_triage.feature features/pdf.feature features/search.feature features/upload_wizard.feature -n 11 --test-options '--profile ci --tags ~@ie6-bug'
 
 ## browsertests-test2.wikipedia.org-windows-internet_explorer_7
 - Browser Label: internet_explorer_7
-- bundle exec: parallel_cucumber features/create_account.feature features/file.feature features/guided_tour.feature features/login.feature features/math.feature features/page.feature features/page_edit.feature features/page_triage.feature features/search.feature features/upload_wizard.feature -n 10 --test-options '--profile ci --tags ~@ie7-bug'
+- bundle exec: parallel_cucumber features/create_account.feature features/file.feature features/guided_tour.feature features/login.feature features/math.feature features/page.feature features/page_edit.feature features/page_triage.feature features/pdf.feature features/search.feature features/upload_wizard.feature -n 11 --test-options '--profile ci --tags ~@ie7-bug'
 
 ## browsertests-test2.wikipedia.org-windows-internet_explorer_8
 - Browser Label: internet_explorer_8
-- bundle exec: parallel_cucumber features/create_account.feature features/file.feature features/guided_tour.feature features/login.feature features/math.feature features/page.feature features/page_edit.feature features/page_triage.feature features/search.feature features/upload_wizard.feature -n 10 --test-options '--profile ci --tags ~@ie8-bug'
+- bundle exec: parallel_cucumber features/create_account.feature features/file.feature features/guided_tour.feature features/login.feature features/math.feature features/page.feature features/page_edit.feature features/page_triage.feature features/pdf.feature features/search.feature features/upload_wizard.feature -n 11 --test-options '--profile ci --tags ~@ie8-bug'
 
 ## browsertests-test2.wikipedia.org-windows-internet_explorer_9
 - Browser Label: internet_explorer_9
