@@ -11,5 +11,9 @@ class MainPage
   end
   page_url url
 
-  a(:my_sandbox, text: "My sandbox")
+  a(:login, text: 'Log in')
+  a(:logout, text: 'Log out')
+  a(:my_sandbox, text: 'My sandbox')
+  a(:preferences, text: 'Preferences')
+  a(:talk, text: 'Talk')
 end
