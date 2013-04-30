@@ -2,7 +2,10 @@ class DescribePage
   include PageObject
 
   include URL
-  page_url URL.url('Special:UploadWizard')
+  def self.url
+    URL.url('Special:UploadWizard')
+  end
+  page_url url
 
   textarea(:description, name: /^description/)
   div(:next_parent, id: 'mwe-upwiz-stepdiv-details')

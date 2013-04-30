@@ -2,7 +2,10 @@ class UploadWizardPage
   include PageObject
 
   include URL
-  page_url URL.url('Special:UploadWizard')
+  def self.url
+    URL.url('Special:UploadWizard')
+  end
+  page_url url
 
   text_field(:add_categories, id: 'categories0')
   text_field(:altitude, id: 'location-altitude0')
