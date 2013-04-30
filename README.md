@@ -4,18 +4,24 @@
 
 To run the Selenium tests you will have to install Ruby (look at `.ruby-version` file for the exact version), the latest versions of RubyGems and Firefox (the default browser in which the tests run). The easiest way to install Ruby on Linux/Unix is [RVM](https://rvm.io/) and on Windows [RubyInstaller](http://rubyinstaller.org/).
 
-Update RubyGems and install the required RubyGems:
+Clone the repository, `cd` into it, update RubyGems and install the required RubyGems:
 
     cd browsertests
     gem update --system
     gem install bundler
     bundle install
 
-You will need a file with credentials located at `/private/wmf/secret.yml`. For local testing, create a user named `Selenium_user` on your local wiki and record the password in this file as
+`secret.yml` file at `/private/wmf/` or `config/` is required for tests tagged `@login`. For local testing, create a user named `Selenium_user` on your local wiki and record the password in this file as
 
     mediawiki_password: password here
 
 Run the tests with `bundle exec rake`, this should start Firefox.
+
+By default the tests run at en.wikipedia.beta.wmflabs.org. If you want to run the tests elsewhere, you have to set `MEDIAWIKI_URL` environment variable. For example:
+
+    export MEDIAWIKI_URL=http://commons.wikimedia.beta.wmflabs.org/wiki/ # Linux/Unix
+    set MEDIAWIKI_URL=http://commons.wikimedia.beta.wmflabs.org/wiki/ # Windows
+
 The test run creates an HTML report in `reports/` and an XML report (for Jenkins) in `reports/junit`.
 
 To run a single test enter `bundle exec cucumber features/FEATURE_NAME.feature`.
