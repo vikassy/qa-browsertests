@@ -1,4 +1,4 @@
-class AppearancePage
+class PreferencesAppearancePage
   include PageObject
 
   include URL
