@@ -1,4 +1,4 @@
-@en.wikipedia.beta.wmflabs.org
+@en.wikipedia.beta.wmflabs.org @test2.wikipedia.org
 Feature: Edit
 
   Background:

@@ -118,7 +118,7 @@
 
 # browsertests-test2.wikipedia.org
 
-- bundle exec: parallel_cucumber features/create_account.feature features/file.feature features/guided_tour.feature features/login.feature features/math.feature features/page.feature features/page_edit.feature features/page_triage.feature features/pdf.feature features/search.feature features/upload_wizard.feature -n 11 --test-options '--profile ci'
+- bundle exec: parallel_cucumber features/ -n 11 --test-options '--profile ci --tags @test2.wikipedia.org'
 - MediaWiki URL: test2.wikipedia.org
 
 
@@ -130,15 +130,15 @@
 
 ## browsertests-test2.wikipedia.org-windows-internet_explorer_6
 - Browser Label: internet_explorer_6
-- bundle exec: parallel_cucumber features/create_account.feature features/file.feature features/guided_tour.feature features/login.feature features/math.feature features/page.feature features/page_edit.feature features/page_triage.feature features/pdf.feature features/search.feature features/upload_wizard.feature -n 11 --test-options '--profile ci --tags ~@ie6-bug'
+- bundle exec: parallel_cucumber features/ -n 11 --test-options '--profile ci --tags @test2.wikipedia.org --tags ~@ie6-bug'
 
 ## browsertests-test2.wikipedia.org-windows-internet_explorer_7
 - Browser Label: internet_explorer_7
-- bundle exec: parallel_cucumber features/create_account.feature features/file.feature features/guided_tour.feature features/login.feature features/math.feature features/page.feature features/page_edit.feature features/page_triage.feature features/pdf.feature features/search.feature features/upload_wizard.feature -n 11 --test-options '--profile ci --tags ~@ie7-bug'
+- bundle exec: parallel_cucumber features/ -n 11 --test-options '--profile ci --tags @test2.wikipedia.org --tags ~@ie7-bug'
 
 ## browsertests-test2.wikipedia.org-windows-internet_explorer_8
 - Browser Label: internet_explorer_8
-- bundle exec: parallel_cucumber features/create_account.feature features/file.feature features/guided_tour.feature features/login.feature features/math.feature features/page.feature features/page_edit.feature features/page_triage.feature features/pdf.feature features/search.feature features/upload_wizard.feature -n 11 --test-options '--profile ci --tags ~@ie8-bug'
+- bundle exec: parallel_cucumber features/ -n 11 --test-options '--profile ci --tags @test2.wikipedia.org --tags ~@ie8-bug'
 
 ## browsertests-test2.wikipedia.org-windows-internet_explorer_9
 - Browser Label: internet_explorer_9

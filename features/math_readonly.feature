@@ -1,4 +1,5 @@
 # Feature files that end with "_readonly.feature" should be read only, so they could be run at en.wikipedia.org
+@test2.wikipedia.org
 Feature: Math
 
   Scenario: Display simple math

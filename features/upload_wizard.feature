@@ -1,4 +1,4 @@
-@commons.wikimedia.beta.wmflabs.org @login
+@commons.wikimedia.beta.wmflabs.org @login @test2.wikipedia.org
 Feature: UploadWizard
 
   Background:

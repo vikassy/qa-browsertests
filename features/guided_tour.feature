@@ -1,3 +1,4 @@
+@test2.wikipedia.org
 Feature: Guided Tour
 
   Scenario: Check for Ready to Help guider

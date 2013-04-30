@@ -1,3 +1,4 @@
+@test2.wikipedia.org
 Feature: Page
 
   Scenario: Anonymous goes to page that does not exist

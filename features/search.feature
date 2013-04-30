@@ -1,4 +1,4 @@
-@commons.wikimedia.beta.wmflabs.org @en.wikipedia.beta.wmflabs.org
+@commons.wikimedia.beta.wmflabs.org @en.wikipedia.beta.wmflabs.org @test2.wikipedia.org
 Feature: Search
 
   Scenario: Search suggestions
