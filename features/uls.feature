@@ -1,3 +1,4 @@
+@sandbox.translatewiki.net
 Feature: Universal Language Selector User language selector
 
   Scenario: Open Language selector

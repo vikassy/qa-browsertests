@@ -1,4 +1,4 @@
-@language
+@language @sandbox.translatewiki.net
 Feature: Universal Language Selector Accept-Language
 
   Scenario Outline: Accept-Language

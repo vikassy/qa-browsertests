@@ -92,7 +92,7 @@
 
 
 # browsertests-sandbox.translatewiki.net
-- bundle exec: parallel_cucumber features/create_account.feature features/uls*feature -n 4 --test-options '--profile ci'
+- bundle exec: parallel_cucumber features/ -n 4 --test-options '--profile ci  --tags @sandbox.translatewiki.net'
 - MediaWiki URL: sandbox.translatewiki.net
 
 
