@@ -1,3 +1,4 @@
+@commons.wikimedia.beta.wmflabs.org
 Feature: File
 
  Scenario: Anonymous goes to file that does not exist

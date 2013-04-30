@@ -1,3 +1,4 @@
+@commons.wikimedia.beta.wmflabs.org
 Feature: Search
 
   Scenario: Search suggestions

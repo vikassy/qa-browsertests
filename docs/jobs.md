@@ -9,7 +9,7 @@
 # browsertests-commons.wikimedia.beta.wmflabs.org
 
 - MediaWiki URL: commons.wikimedia.beta.wmflabs.org
-- bundle exec: parallel_cucumber features/create_account.feature features/file.feature features/login.feature features/search.feature features/upload_wizard.feature -n 5 --test-options '--profile ci'
+- bundle exec: parallel_cucumber features/ -n 5 --test-options '--profile ci --tags @commons.wikimedia.beta.wmflabs.org'
 
 
 ## browsertests-commons.wikimedia.beta.wmflabs.org-linux-chrome
@@ -20,15 +20,15 @@
 
 ## browsertests-commons.wikimedia.beta.wmflabs.org-windows-internet_explorer_6
 - Browser Label: internet_explorer_6
-- bundle exec: parallel_cucumber features/create_account.feature features/file.feature features/login.feature features/search.feature features/upload_wizard.feature -n 5 --test-options '--profile ci --tags ~@ie6-bug'
+- bundle exec: parallel_cucumber features/ -n 5 --test-options '--profile ci --tags @commons.wikimedia.beta.wmflabs.org --tags ~@ie6-bug'
 
 ## browsertests-commons.wikimedia.beta.wmflabs.org-windows-internet_explorer_7
 - Browser Label: internet_explorer_7
-- bundle exec: parallel_cucumber features/create_account.feature features/file.feature features/login.feature features/search.feature features/upload_wizard.feature -n 5 --test-options '--profile ci --tags ~@ie7-bug'
+- bundle exec: parallel_cucumber features/ -n 5 --test-options '--profile ci --tags @commons.wikimedia.beta.wmflabs.org --tags ~@ie7-bug'
 
 ## browsertests-commons.wikimedia.beta.wmflabs.org-windows-internet_explorer_8
 - Browser Label: internet_explorer_8
-- bundle exec: parallel_cucumber features/create_account.feature features/file.feature features/login.feature features/search.feature features/upload_wizard.feature -n 5 --test-options '--profile ci --tags ~@ie8-bug'
+- bundle exec: parallel_cucumber features/ -n 5 --test-options '--profile ci --tags @commons.wikimedia.beta.wmflabs.org --tags ~@ie8-bug'
 
 ## browsertests-commons.wikimedia.beta.wmflabs.org-windows-internet_explorer_9
 - Browser Label: internet_explorer_9

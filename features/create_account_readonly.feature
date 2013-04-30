@@ -1,4 +1,5 @@
 # Feature files that end with "_readonly.feature" should be read only, so they could be run at en.wikipedia.org
+@commons.wikimedia.beta.wmflabs.org
 Feature: Create account
 
   Scenario Outline: Go to Create account page
