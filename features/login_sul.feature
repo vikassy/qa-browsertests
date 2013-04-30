@@ -1,3 +1,4 @@
+@commons.wikimedia.beta.wmflabs.org
 Feature: Login SUL
 
   Background:
