@@ -1,15 +1,8 @@
 class PageTriagePage
   include PageObject
 
-  def self.url
-    if ENV['MEDIAWIKI_URL']
-      mediawiki_url = ENV['MEDIAWIKI_URL']
-    else
-      mediawiki_url = 'http://en.wikipedia.beta.wmflabs.org/wiki/'
-    end
-    "#{mediawiki_url}Special:NewPagesFeed"
-  end
-  page_url url
+  include URL
+  page_url URL.url('Special:NewPagesFeed')
 
   radio_button(:blocked, id: 'mwe-pt-filter-blocked')
   radio_button(:bots, id: 'mwe-pt-filter-bot-edits')

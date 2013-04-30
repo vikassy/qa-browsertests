@@ -1,15 +1,8 @@
 class RandomPage
   include PageObject
 
-  def self.url
-    if ENV['MEDIAWIKI_URL']
-      mediawiki_url = ENV['MEDIAWIKI_URL']
-    else
-      mediawiki_url = 'http://en.wikipedia.beta.wmflabs.org/wiki/'
-    end
-    "#{mediawiki_url}Special:Random"
-  end
-  page_url url
+  include URL
+  page_url URL.url('Special:Random')
 
   li(:main_page, id: 'n-mainpage-description')
   a(:download_as_pdf, text: 'Download as PDF')

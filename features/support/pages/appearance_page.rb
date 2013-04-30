@@ -1,15 +1,8 @@
 class AppearancePage
   include PageObject
 
-  def self.url
-    if ENV['MEDIAWIKI_URL']
-      mediawiki_url = ENV['MEDIAWIKI_URL']
-    else
-      mediawiki_url = 'http://en.wikipedia.beta.wmflabs.org/wiki/'
-    end
-    "#{mediawiki_url}Special:Preferences#mw-prefsection-rendering"
-  end
-  page_url url
+  include URL
+  page_url URL.url('Special:Preferences#mw-prefsection-rendering')
 
   radio_button(:always_render_radio, id: 'mw-input-wpmath-0')
   checkbox(:auto_number_check, id: 'mw-input-wpnumberheadings')

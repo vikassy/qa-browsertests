@@ -1,15 +1,8 @@
 class AFTv5Page
   include PageObject
 
-  def self.url
-    if ENV['MEDIAWIKI_URL']
-      mediawiki_url = ENV['MEDIAWIKI_URL']
-    else
-      mediawiki_url = 'http://en.wikipedia.beta.wmflabs.org/wiki/'
-    end
-    "#{mediawiki_url}Aftpage"
-  end
-  page_url url
+  include URL
+  page_url URL.url('Aftpage')
 
   div(:aft_box, id: 'mw-articlefeedbackv5')
   a(:all_comments, text: /All comments/)

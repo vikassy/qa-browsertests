@@ -1,15 +1,8 @@
 class PreferencesPage
   include PageObject
 
-  def self.url
-    if ENV['MEDIAWIKI_URL']
-      mediawiki_url = ENV['MEDIAWIKI_URL']
-    else
-      mediawiki_url = 'http://en.wikipedia.beta.wmflabs.org/wiki/'
-    end
-    "#{mediawiki_url}Special:Preferences"
-  end
-  page_url url
+  include URL
+  page_url URL.url('Special:Preferences')
 
   a(:appearance_link, text: 'Appearance')
   a(:date_and_time_link, text: 'Date and time')

@@ -1,15 +1,8 @@
 class UploadWizardPage
   include PageObject
 
-  def self.url
-    if ENV['MEDIAWIKI_URL']
-      mediawiki_url = ENV['MEDIAWIKI_URL']
-    else
-      mediawiki_url = 'http://en.wikipedia.beta.wmflabs.org/wiki/'
-    end
-    "#{mediawiki_url}Special:UploadWizard"
-  end
-  page_url url
+  include URL
+  page_url URL.url('Special:UploadWizard')
 
   text_field(:add_categories, id: 'categories0')
   text_field(:altitude, id: 'location-altitude0')
