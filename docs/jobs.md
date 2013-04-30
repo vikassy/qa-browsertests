@@ -36,8 +36,8 @@
 
 
 # browsertests-en.wikipedia.beta.wmflabs.org
-- bundle exec: parallel_cucumber features/aftv5.feature features/create_account.feature features/file.feature features/page_edit.feature features/page_triage.feature features/pdf.feature features/preferences_appearance.feature features/search.feature -n 8 --test-options '--profile ci'
-- MediaWiki URL: en.wikipedia.beta.wmflabs.or
+- bundle exec: parallel_cucumber features/ -n 8 --test-options '--profile ci --tags @en.wikipedia.beta.wmflabs.org'
+- MediaWiki URL: en.wikipedia.beta.wmflabs.org
 
 
 ## browsertests-en.wikipedia.beta.wmflabs.org-linux-chrome
@@ -48,15 +48,15 @@
 
 ## browsertests-en.wikipedia.beta.wmflabs.org-windows-internet_explorer_6
 - Browser Label: internet_explorer_6
-- bundle exec: parallel_cucumber features/aftv5.feature features/create_account.feature features/file.feature features/page_edit.feature features/page_triage.feature features/pdf.feature features/preferences_appearance.feature features/search.feature -n 8 --test-options '--profile ci --tags ~@ie6-bug'
+- bundle exec: parallel_cucumber features/ -n 8 --test-options '--profile ci --tags @en.wikipedia.beta.wmflabs.org --tags ~@ie6-bug'
 
 ## browsertests-en.wikipedia.beta.wmflabs.org-windows-internet_explorer_7
 - Browser Label: internet_explorer_7
-- bundle exec: parallel_cucumber features/aftv5.feature features/create_account.feature features/file.feature features/page_edit.feature features/page_triage.feature features/pdf.feature features/preferences_appearance.feature features/search.feature -n 8 --test-options '--profile ci --tags ~@ie7-bug'
+- bundle exec: parallel_cucumber features/ -n 8 --test-options '--profile ci --tags @en.wikipedia.beta.wmflabs.org --tags ~@ie7-bug'
 
 ## browsertests-en.wikipedia.beta.wmflabs.org-windows-internet_explorer_8
 - Browser Label: internet_explorer_8
-- bundle exec: parallel_cucumber features/aftv5.feature features/create_account.feature features/file.feature features/page_edit.feature features/page_triage.feature features/pdf.feature features/preferences_appearance.feature features/search.feature -n 8 --test-options '--profile ci --tags ~@ie8-bug'
+- bundle exec: parallel_cucumber features/ -n 8 --test-options '--profile ci --tags @en.wikipedia.beta.wmflabs.org --tags ~@ie8-bug'
 
 ## browsertests-en.wikipedia.beta.wmflabs.org-windows-internet_explorer_9
 - Browser Label: internet_explorer_9

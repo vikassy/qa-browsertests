@@ -1,5 +1,5 @@
 # http://www.mediawiki.org/wiki/Article_feedback/Version_5/Feature_Requirements#Platforms @ie6-bug @phantomjs-bug
-@ie6-bug @phantomjs-bug
+@en.wikipedia.beta.wmflabs.org @ie6-bug @phantomjs-bug
 Feature: AFTv5
 
   Background:

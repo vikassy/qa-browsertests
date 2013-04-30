@@ -1,4 +1,5 @@
 # Feature files that end with "_readonly.feature" should be read only, so they could be run at en.wikipedia.org
+@en.wikipedia.beta.wmflabs.org
 Feature: PDF
 
   Scenario: Check for Download as PDF link
