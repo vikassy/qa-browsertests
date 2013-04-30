@@ -92,9 +92,8 @@
 
 
 # browsertests-sandbox.translatewiki.net
-
+- bundle exec: parallel_cucumber features/create_account.feature features/uls*feature -n 4 --test-options '--profile ci'
 - MediaWiki URL: sandbox.translatewiki.net
-- bundle exec: parallel_cucumber features/create_account.feature features/uls_ime.feature features/universal_language_selector.feature -n 3 --test-options '--profile ci'
 
 
 ## browsertests-sandbox.translatewiki.net-linux-chrome
@@ -102,7 +101,6 @@
 
 ## browsertests-sandbox.translatewiki.net-linux-firefox
 - Browser Label: firefox
-- bundle exec: parallel_cucumber features/accept_language.feature features/create_account.feature features/uls_ime.feature features/universal_language_selector.feature -n 4 --test-options '--profile ci'
 
 ## browsertests-sandbox.translatewiki.net-windows-internet_explorer_6
 - Browser Label: internet_explorer_6
