@@ -63,8 +63,8 @@
 
 
 
-# browsertests-en.wikipedia.org-linux-firefox
-- bundle exec: parallel_cucumber features/create_account.feature features/math.feature features/page_triage.feature features/pdf.feature features/preferences_appearance.feature -n 5 --test-options '--profile ci'
+# browsertests-en.wikipedia.org
+- bundle exec: parallel_cucumber features/*_readonly.feature -n 5 --test-options '--profile ci'
 - MediaWiki URL: en.wikipedia.org
 
 
@@ -76,15 +76,15 @@
 
 ## browsertests-en.wikipedia.org-windows-internet_explorer_6
 - Browser Label: internet_explorer_6
-- bundle exec: parallel_cucumber features/create_account.feature features/math.feature features/page_triage.feature features/pdf.feature features/preferences_appearance.feature -n 5 --test-options '--profile ci --tags ~@ie6-bug'
+- bundle exec: parallel_cucumber features/*_readonly.feature -n 5 --test-options '--profile ci --tags ~@ie6-bug'
 
 ## browsertests-en.wikipedia.org-windows-internet_explorer_7
 - Browser Label: internet_explorer_7
-- bundle exec: parallel_cucumber features/create_account.feature features/math.feature features/page_triage.feature features/pdf.feature features/preferences_appearance.feature -n 5 --test-options '--profile ci --tags ~@ie7-bug'
+- bundle exec: parallel_cucumber features/*_readonly.feature -n 5 --test-options '--profile ci --tags ~@ie7-bug'
 
 ## browsertests-en.wikipedia.org-windows-internet_explorer_8
 - Browser Label: internet_explorer_8
-- bundle exec: parallel_cucumber features/create_account.feature features/math.feature features/page_triage.feature features/pdf.feature features/preferences_appearance.feature -n 5 --test-options '--profile ci --tags ~@ie8-bug'
+- bundle exec: parallel_cucumber features/*_readonly.feature -n 5 --test-options '--profile ci --tags ~@ie8-bug'
 
 ## browsertests-en.wikipedia.org-windows-internet_explorer_9
 - Browser Label: internet_explorer_9
