@@ -1,4 +1,4 @@
-Feature: ULS User language selector
+Feature: Universal Language Selector User language selector
 
   Scenario: Open Language selector
     Given I visit a random page
