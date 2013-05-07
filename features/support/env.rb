@@ -51,10 +51,14 @@ def sauce_browser(test_name, saucelabs_username, saucelabs_key, language)
 
   if language == 'default'
     caps = Selenium::WebDriver::Remote::Capabilities.send(browser_label['name'])
-  else
+  elsif browser_label['name'] == 'firefox'
     profile = Selenium::WebDriver::Firefox::Profile.new
     profile['intl.accept_languages'] = language
-    caps = Selenium::WebDriver::Remote::Capabilities.send(browser_label['name'], :firefox_profile => profile)
+    caps = Selenium::WebDriver::Remote::Capabilities.firefox(:firefox_profile => profile)
+  elsif browser_label['name'] == 'chrome'
+    profile = Selenium::WebDriver::Chrome::Profile.new
+    profile['intl.accept_languages'] = language
+    caps = Selenium::WebDriver::Remote::Capabilities.chrome('chrome.profile' => profile.as_json['zip'])
   end
 
   caps.platform = browser_label['platform']
