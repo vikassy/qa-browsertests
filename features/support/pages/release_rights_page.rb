@@ -12,4 +12,5 @@ class ReleaseRightsPage
   span(:next) do |page|
     page.next_parent_element.span_element(text: 'Next')
   end
+  div(:thumbnail, id: 'mwe-upwiz-deeds-thumbnails')
 end

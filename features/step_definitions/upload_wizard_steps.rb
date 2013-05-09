@@ -31,6 +31,9 @@ When /^I navigate to Upload Wizard$/ do
   # TODO: add more checks for this page
   visit(UploadWizardPage).tutorial_map.should be_true
 end
+When /^thumbnail should be visible$/ do
+  on(ReleaseRightsPage).thumbnail_element.should be_visible
+end
 When /^upload file (.+)$/ do |file_name|
   require 'chunky_png'
   ChunkyPNG::Image.new(Random.new.rand(255), Random.new.rand(255), Random.new.rand(255)).save file_name
@@ -50,9 +53,6 @@ Then /^Describe page should open$/ do
 end
 Then /^Learn page should appear$/ do
   @browser.url.should == on(UploadWizardPage).class.url
-end
-Then /^Next button should be there$/ do
-  on(ReleaseRightsPage).next_element.should exist
 end
 Then /^Release rights page should open$/ do
   @browser.url.should == on(ReleaseRightsPage).class.url

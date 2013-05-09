@@ -20,7 +20,7 @@ Feature: UploadWizard
       And upload file image.png
       And click button Continue
     Then Release rights page should open
-      And Next button should be there
+      And thumbnail should be visible
 
   @phantomjs-bug
   Scenario: Navigate to Describe page
