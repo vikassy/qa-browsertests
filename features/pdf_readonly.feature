@@ -4,9 +4,11 @@ Feature: PDF
 
   Scenario: Check for Download as PDF link
     Given I am at random page
+    When I click Print/export
     Then Download as PDF should be present
 
   Scenario: Click on Download as PDF link
     Given I am at random page
-    When I click on Download as PDF
+    When I click Print/export
+      And I click on Download as PDF
     Then Download the file link should be present
