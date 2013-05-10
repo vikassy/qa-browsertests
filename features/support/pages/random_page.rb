@@ -4,6 +4,7 @@ class RandomPage
   include URL
   page_url URL.url('Special:Random')
 
+  span(:cog, title: 'Language settings')
   a(:create_a_book, text: 'Create a book')
   li(:main_page, id: 'n-mainpage-description')
   a(:download_as_pdf, text: 'Download as PDF')
