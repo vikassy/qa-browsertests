@@ -1,8 +1,12 @@
+Given(/^I am logged in to (.+)$/) do |_|
+  step 'I am logged in'
+end
+
 When(/^I log out$/) do
   on(MainPage).logout
 end
 
-Then(/^I should be logged in at (.+)$/) do |site|
+Then(/^I should be logged in to (.+)$/) do |site|
   host = URI(@browser.url).host.split('.')[2..-1].join('.')
   url = "#{site}.#{host}"
   @browser.goto url
@@ -13,8 +17,7 @@ Then(/^I should be logged in at (.+)$/) do |site|
     page.login_element.should_not exist
   end
 end
-
-Then(/^I should not be logged in at (.+)$/) do |site|
+Then(/^I should not be logged in to (.+)$/) do |site|
   host = URI(@browser.url).host.split('.')[2..-1].join('.')
   url = "#{site}.#{host}"
   @browser.goto url

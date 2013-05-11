@@ -1,16 +1,22 @@
 @commons.wikimedia.beta.wmflabs.org
-Feature: Login SUL
+Feature: Single-user login v2
 
-  Background:
-    Given I am logged in
+  Scenario: Logging in on a wiki logs me in to all wikis on the same project
+    Given I am logged in to commons.wikimedia
+    Then I should be logged in to meta.wikimedia
 
-  Scenario: Login on wikis on same project
-    Then I should be logged in at commons.wikimedia
-      And I should be logged in at en.wikipedia
-      And I should be logged in at meta.wikimedia
+  Scenario: Logging in on a wiki logs me in to all wikis on different projects
+    Given I am logged in to commons.wikimedia
+    Then I should be logged in to en.wikipedia
 
-  Scenario: Logout on one wiki logs out all wikis
+  Scenario: Logging out from a wiki logs me out from all wikis on the same project
+    Given I am logged in to commons.wikimedia
     When I log out
-    Then I should not be logged in at commons.wikimedia
-      And I should not be logged in at en.wikipedia
-      And I should not be logged in at meta.wikimedia
+    Then I should not be logged in to commons.wikimedia
+    And I should not be logged in to meta.wikimedia
+
+  Scenario: Logging out from a wiki logs me out from all wikis on different projects
+    Given I am logged in to commons.wikimedia
+    When I log out
+    Then I should not be logged in to commons.wikimedia
+    And I should not be logged in to en.wikipedia
