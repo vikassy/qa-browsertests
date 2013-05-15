@@ -17,3 +17,7 @@ end
 When(/^I click Print\/export$/) do
   on(RandomPage).print_export
 end
+
+When(/^I click Print\/export again$/) do
+  step 'I click Print/export'
+end
