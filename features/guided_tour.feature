@@ -8,7 +8,7 @@ Feature: Guided Tour
 
   Scenario: Check for Click Edit guider
     Given I am on a page with Ready to Help guider
-    When I click Okay
+    When I click Next
     Then I should see a Click Edit guider
 
   Scenario: Check for Preview guider

@@ -11,8 +11,8 @@ Given /^I am on a page with Ready to Help guider$/ do
   step 'I append ?tour=gettingstarted to the page URL'
 end
 
-When /^I click Okay$/ do
-  on(TourPage).okay_element.when_present.click
+When /^I click Next$/ do
+  on(TourPage).next_element.when_present.click
 end
 
 Then /^I should see a Click Edit guider$/ do
@@ -21,7 +21,7 @@ end
 
 Given /^I am on a page with Click Edit guider$/ do
   step 'I am on a page with Ready to Help guider'
-  step 'I click Okay'
+  step 'I click Next'
 end
 
 When /^I click the Edit link on the wiki page$/ do
