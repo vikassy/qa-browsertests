@@ -9,7 +9,7 @@
 # browsertests-commons.wikimedia.beta.wmflabs.org
 
 - MediaWiki URL: commons.wikimedia.beta.wmflabs.org
-- bundle exec: parallel_cucumber features/ -n 5 --test-options '--profile ci --tags @commons.wikimedia.beta.wmflabs.org'
+- bundle exec: cucumber --verbose --profile ci --tags @commons.wikimedia.beta.wmflabs.org
 
 
 ## browsertests-commons.wikimedia.beta.wmflabs.org-linux-chrome
@@ -20,15 +20,15 @@
 
 ## browsertests-commons.wikimedia.beta.wmflabs.org-windows-internet_explorer_6
 - Browser Label: internet_explorer_6
-- bundle exec: parallel_cucumber features/ -n 5 --test-options '--profile ci --tags @commons.wikimedia.beta.wmflabs.org --tags ~@ie6-bug'
+- bundle exec: cucumber --verbose --profile ci --tags @commons.wikimedia.beta.wmflabs.org --tags ~@ie6-bug
 
 ## browsertests-commons.wikimedia.beta.wmflabs.org-windows-internet_explorer_7
 - Browser Label: internet_explorer_7
-- bundle exec: parallel_cucumber features/ -n 5 --test-options '--profile ci --tags @commons.wikimedia.beta.wmflabs.org --tags ~@ie7-bug'
+- bundle exec: cucumber --verbose --profile ci --tags @commons.wikimedia.beta.wmflabs.org --tags ~@ie7-bug
 
 ## browsertests-commons.wikimedia.beta.wmflabs.org-windows-internet_explorer_8
 - Browser Label: internet_explorer_8
-- bundle exec: parallel_cucumber features/ -n 5 --test-options '--profile ci --tags @commons.wikimedia.beta.wmflabs.org --tags ~@ie8-bug'
+- bundle exec: cucumber --verbose --profile ci --tags @commons.wikimedia.beta.wmflabs.org --tags ~@ie8-bug
 
 ## browsertests-commons.wikimedia.beta.wmflabs.org-windows-internet_explorer_9
 - Browser Label: internet_explorer_9
@@ -36,7 +36,7 @@
 
 
 # browsertests-en.wikipedia.beta.wmflabs.org
-- bundle exec: parallel_cucumber features/ -n 8 --test-options '--profile ci --tags @en.wikipedia.beta.wmflabs.org'
+- bundle exec: cucumber --verbose --profile ci --tags @en.wikipedia.beta.wmflabs.org
 - MediaWiki URL: en.wikipedia.beta.wmflabs.org
 
 
@@ -48,15 +48,15 @@
 
 ## browsertests-en.wikipedia.beta.wmflabs.org-windows-internet_explorer_6
 - Browser Label: internet_explorer_6
-- bundle exec: parallel_cucumber features/ -n 8 --test-options '--profile ci --tags @en.wikipedia.beta.wmflabs.org --tags ~@ie6-bug'
+- bundle exec: cucumber --verbose --profile ci --tags @en.wikipedia.beta.wmflabs.org --tags ~@ie6-bug
 
 ## browsertests-en.wikipedia.beta.wmflabs.org-windows-internet_explorer_7
 - Browser Label: internet_explorer_7
-- bundle exec: parallel_cucumber features/ -n 8 --test-options '--profile ci --tags @en.wikipedia.beta.wmflabs.org --tags ~@ie7-bug'
+- bundle exec: cucumber --verbose --profile ci --tags @en.wikipedia.beta.wmflabs.org --tags ~@ie7-bug
 
 ## browsertests-en.wikipedia.beta.wmflabs.org-windows-internet_explorer_8
 - Browser Label: internet_explorer_8
-- bundle exec: parallel_cucumber features/ -n 8 --test-options '--profile ci --tags @en.wikipedia.beta.wmflabs.org --tags ~@ie8-bug'
+- bundle exec: cucumber --verbose --profile ci --tags @en.wikipedia.beta.wmflabs.org --tags ~@ie8-bug
 
 ## browsertests-en.wikipedia.beta.wmflabs.org-windows-internet_explorer_9
 - Browser Label: internet_explorer_9
@@ -64,7 +64,7 @@
 
 
 # browsertests-en.wikipedia.org
-- bundle exec: parallel_cucumber features/*_readonly.feature -n 5 --test-options '--profile ci'
+- bundle exec: cucumber features/*_readonly.feature --verbose --profile ci --tags @en.wikipedia.org
 - MediaWiki URL: en.wikipedia.org
 
 
@@ -76,15 +76,15 @@
 
 ## browsertests-en.wikipedia.org-windows-internet_explorer_6
 - Browser Label: internet_explorer_6
-- bundle exec: parallel_cucumber features/*_readonly.feature -n 5 --test-options '--profile ci --tags ~@ie6-bug'
+- bundle exec: cucumber features/*_readonly.feature --verbose --profile ci --tags @en.wikipedia.org --tags ~@ie6-bug
 
 ## browsertests-en.wikipedia.org-windows-internet_explorer_7
 - Browser Label: internet_explorer_7
-- bundle exec: parallel_cucumber features/*_readonly.feature -n 5 --test-options '--profile ci --tags ~@ie7-bug'
+- bundle exec: cucumber features/*_readonly.feature --verbose --profile ci --tags @en.wikipedia.org --tags ~@ie7-bug
 
 ## browsertests-en.wikipedia.org-windows-internet_explorer_8
 - Browser Label: internet_explorer_8
-- bundle exec: parallel_cucumber features/*_readonly.feature -n 5 --test-options '--profile ci --tags ~@ie8-bug'
+- bundle exec: cucumber features/*_readonly.feature --verbose --profile ci --tags @en.wikipedia.org --tags ~@ie8-bug
 
 ## browsertests-en.wikipedia.org-windows-internet_explorer_9
 - Browser Label: internet_explorer_9
@@ -92,7 +92,7 @@
 
 
 # browsertests-sandbox.translatewiki.net
-- bundle exec: parallel_cucumber features/ -n 4 --test-options '--profile ci  --tags @sandbox.translatewiki.net'
+- bundle exec: cucumber --verbose --profile ci --tags @sandbox.translatewiki.net
 - MediaWiki URL: sandbox.translatewiki.net
 
 
@@ -118,7 +118,7 @@
 
 # browsertests-test2.wikipedia.org
 
-- bundle exec: parallel_cucumber features/ -n 11 --test-options '--profile ci --tags @test2.wikipedia.org'
+- bundle exec: cucumber --verbose --profile ci --tags @test2.wikipedia.org
 - MediaWiki URL: test2.wikipedia.org
 
 
@@ -130,15 +130,15 @@
 
 ## browsertests-test2.wikipedia.org-windows-internet_explorer_6
 - Browser Label: internet_explorer_6
-- bundle exec: parallel_cucumber features/ -n 11 --test-options '--profile ci --tags @test2.wikipedia.org --tags ~@ie6-bug'
+- bundle exec: cucumber --verbose --profile ci --tags @test2.wikipedia.org --tags ~@ie6-bug
 
 ## browsertests-test2.wikipedia.org-windows-internet_explorer_7
 - Browser Label: internet_explorer_7
-- bundle exec: parallel_cucumber features/ -n 11 --test-options '--profile ci --tags @test2.wikipedia.org --tags ~@ie7-bug'
+- bundle exec: cucumber --verbose --profile ci --tags @test2.wikipedia.org --tags ~@ie7-bug
 
 ## browsertests-test2.wikipedia.org-windows-internet_explorer_8
 - Browser Label: internet_explorer_8
-- bundle exec: parallel_cucumber features/ -n 11 --test-options '--profile ci --tags @test2.wikipedia.org --tags ~@ie8-bug'
+- bundle exec: cucumber --verbose --profile ci --tags @test2.wikipedia.org --tags ~@ie8-bug
 
 ## browsertests-test2.wikipedia.org-windows-internet_explorer_9
 - Browser Label: internet_explorer_9
