@@ -1,4 +1,4 @@
-@sandbox.translatewiki.net
+@en.wikipedia.beta.wmflabs.org @sandbox.translatewiki.net
 Feature: Universal Language Selector input method engine
 
   Scenario: User can see input method keyboard icon
