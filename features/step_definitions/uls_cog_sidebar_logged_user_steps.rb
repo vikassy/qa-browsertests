@@ -24,6 +24,11 @@ When(/^I click Apply Settings$/) do
   on(InterlanguagePage).apply_settings_element.click
 end
 
+When(/^I click Cancel$/) do
+  on(InterlanguagePage).cancel_element.click
+end
+
+
 When(/^I click the cog icon by Languages in the sidebar$/) do
   on(NoInterlanguagePage).cog_element.click
 end

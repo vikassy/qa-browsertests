@@ -3,6 +3,7 @@ module InterlanguagePageModule
 
   a(:add_links, id: 'wbc-linkToItem-link')
   span(:cog, class: 'uls-settings-trigger')
+  button(:cancel, class: 'button uls-display-settings-cancel')
   button(:language_button, id: 'uls-display-settings-language-tab')
   button(:fonts_button, id: 'uls-display-settings-fonts-tab')
   button(:default_language_button, class: 'button uls-language-button down')

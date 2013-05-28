@@ -35,3 +35,9 @@ Feature: ULS cog behaviour on the side-bar for logged in users
     When I click Apply Settings
     Then I do not see the Language Settings panel
       And the cog icon brings up Language Settings again
+
+  Scenario: Language Settings closes and opens with Cancel buttons
+    Given I navigate to the Language Settings panel
+    When I click Cancel
+    Then I do not see the Language Settings panel
+      And the cog icon brings up Language Settings again
