@@ -41,3 +41,28 @@ Feature: ULS cog behaviour on the side-bar for logged in users
     When I click Cancel
     Then I do not see the Language Settings panel
       And the cog icon brings up Language Settings again
+
+  Scenario: Input settings display
+    Given I navigate to the Language Settings panel
+    When I click Input
+    Then I can enable input methods
+      And I can disable input methods
+
+  Scenario: Fonts default settings and display
+    Given I navigate to the Language Settings panel
+    When I click Fonts
+    Then a font selectbox appears
+
+  Scenario: Fonts not default settings and display
+    Given I navigate to the Language Settings panel
+    When I choose a different language for writing
+      And I click Fonts
+    Then a font selectbox appears for content
+
+  Scenario: More languages
+    Given I navigate to the Language Settings panel
+    When I click the button with the ellipsis
+    Then I see Common Languages
+      And I see Worldwide
+      And I see Language Search
+      And I can navigate back to Language Settings
