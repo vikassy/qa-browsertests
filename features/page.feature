@@ -1,4 +1,4 @@
-@test2.wikipedia.org
+@en.wikipedia.beta.wmflabs.org
 Feature: Page
 
   Scenario: Anonymous goes to page that does not exist
