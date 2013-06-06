@@ -1,4 +1,4 @@
-@test2.wikipedia.org @login
+@ie6-bug  @ie7-bug  @ie8-bug @test2.wikipedia.org @login
 Feature: VisualEditor
 
   Background:
