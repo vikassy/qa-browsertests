@@ -22,7 +22,7 @@ Then /^newly created page should open$/ do
   @browser.url.should match Regexp.escape(@does_not_exist_page_name)
 end
 Then /^page text should be there$/ do
-  on(ArticlePage).page_text.should == "Starting a new page using the URL"
+  on(ArticlePage).page_text.should match Regexp.escape("Starting a new page using the URL")
 end
 Then /^page text should contain (.+)$/ do |text|
   on(DoesNotExistPage).page_text.should match Regexp.escape(text)
@@ -33,8 +33,12 @@ end
 Then /^text box with page text should be there$/ do
   on(EditPage).article_text_element.should exist
 end
-Then /^watchlist element should not be there$/ do
-  on(ArticlePage).watchlist_element.should_not exist
+Then /^watch element should not be there$/ do
+  on(ArticlePage).watch_element.should_not exist
+end
+
+Then /^unwatch element should be there$/ do
+  on(ArticlePage).unwatch_element.should exist
 end
 
 Given /^I am starting a page to be moved$/  do

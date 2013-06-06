@@ -1,12 +1,15 @@
-@en.wikipedia.beta.wmflabs.org
+@en.wikipedia.beta.wmflabs.org @login
 Feature: Page
 
-  Scenario: Anonymous goes to page that does not exist
+  Background:
+    Given I am logged in
+
+  Scenario:Go to page that does not exist
     Given I am at page that does not exist
-    Then page text should contain There is currently no text in this page.
+    Then page text should contain Wikipedia does not have an article with this exact name
       And link Create should be there
 
-  Scenario: Anonymous goes to start a new page using the URL
+  Scenario: Prepare to start a new page using the URL
     Given I am at page that does not exist
     When I click link Create
     Then edit page should open
@@ -16,7 +19,7 @@ Feature: Page
       And Show Changes button should be there
       And Edit controls should be there
 
-  Scenario: Anonymous starts a new page using the URL
+  Scenario: Start a new page using the URL
     Given I am at page that does not exist
     When I click link Create
       And I enter article text
@@ -27,9 +30,9 @@ Feature: Page
       And Discussion link should be there
       And Edit link should be there
       And View History link should be there
-      And watchlist element should not be there
+      And unwatch element should be there
+      And watch element should not be there
 
-  @login
   Scenario: Move existing page dialog
     Given I am logged in
       And I am starting a page to be moved
@@ -39,10 +42,9 @@ Feature: Page
       And I should see a Namespace selectbox
       And I should see a To new title textbox
       And I should see a Reason textarea
-      And I should see a Leave a redirect radio button
       And I should see a Watch source page radio button
 
-  @ie6-bug @login
+  @ie6-bug
   Scenario: Move existing page
     Given I am logged in
     And I am starting a page to be moved to a new name

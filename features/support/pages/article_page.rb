@@ -8,7 +8,8 @@ class ArticlePage
   a(:edit, text: 'Edit')
   div(:page_text, id: 'mw-content-text')
   h1(:title, id: 'firstHeading')
-  a(:watchlist, text: 'Unwatch')
+  li(:watch, id: 'ca-watch')
+  li(:unwatch, id: 'ca-unwatch')
   a(:move_link, text: 'Move')
   div(:actions, id: 'p-cactions')
   a(:actions_link) do |page|
