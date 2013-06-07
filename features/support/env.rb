@@ -124,10 +124,10 @@ Before do |scenario|
   @mediawiki_username = mediawiki_username
   @mediawiki_password = mediawiki_password
   @browser = browser(environment, test_name(scenario), saucelabs_username, saucelabs_key, 'default') unless @language
+  $session_id = @browser.driver.instance_variable_get(:@bridge).session_id
 end
 
 After do |scenario|
-  $session_id = @browser.driver.instance_variable_get(:@bridge).session_id
   if environment == :cloudbees
     sauce_api(%Q{{"passed": #{scenario.passed?}}}, saucelabs_username, saucelabs_key)
     sauce_api(%Q{{"public": true}}, saucelabs_username, saucelabs_key)
