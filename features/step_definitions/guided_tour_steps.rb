@@ -51,7 +51,7 @@ Given /^I am on a page with You're almost finished guider$/ do
 end
 
 When /^I save the page without changing anything$/ do
-  on(TourPage).when_visible.submit_changes
+  on(TourPage).submit_changes
 end
 
 Then /^Looking for more to do guider should not appear$/ do
