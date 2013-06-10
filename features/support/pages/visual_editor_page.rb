@@ -1,4 +1,4 @@
-class UserPage
+class VisualEditorPage
   include PageObject
 
   include URL
