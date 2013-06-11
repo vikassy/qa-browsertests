@@ -1,4 +1,4 @@
-@en.wikipedia.beta.wmflabs.org @login
+@en.wikipedia.beta.wmflabs.org @login @ie6-bug @ie7-bug
 Feature: ULS cog behaviour on the side-bar for logged in users
 
   Background:
