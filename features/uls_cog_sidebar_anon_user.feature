@@ -1,4 +1,4 @@
-@en.wikipedia.beta.wmflabs.org
+@en.wikipedia.beta.wmflabs.org @ie6-bug  @ie7-bug
 Feature: ULS cog behaviour on the side-bar for logged in users
 
   Scenario: Page without interlanguage links has cog icon and language selector
