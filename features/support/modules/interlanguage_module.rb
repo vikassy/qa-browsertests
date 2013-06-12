@@ -4,6 +4,7 @@ module InterlanguagePageModule
   a(:add_links, id: 'wbc-linkToItem-link')
   span(:apply_settings, class: 'uls-settings-trigger')
   a(:back_to_display, text: 'Back to display settings')
+  a(:back_to_input, text: 'Back to input settings')
   button(:cancel, class: 'button uls-display-settings-cancel')
   span(:cog, class: 'uls-settings-trigger')
   select_list(:content_font_selectbox, id: 'content-font-selector')
