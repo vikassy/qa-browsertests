@@ -114,8 +114,10 @@ Then(/^I should see the text A redirect has been created$/) do
 end
 
 Then(/^the the new page should have the correct text$/) do
-  on(MovePage).old_page_link_element(@does_not_exist_page_name).when_present.click
-  @browser.text.should match /Redirect page/
+  on(MovePage) do |page|
+    page.old_page_link_element(@does_not_exist_page_name).when_present.click
+    page.redirect_content.should match /Redirect page/
+  end
 end
 
 Then(/^the old page should display a redirect to the new page$/) do

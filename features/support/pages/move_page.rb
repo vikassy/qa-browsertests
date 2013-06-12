@@ -7,6 +7,7 @@ class MovePage
   checkbox(:leave_redirect, id: 'wpLeaveRedirect')
   checkbox(:watch_source, id: 'watch')
   button(:move_page, name: 'wpMove')
+  div(:redirect_content, id: 'contentSub')
 
   def old_page_link_element(text)
     @browser.a(text: text)
