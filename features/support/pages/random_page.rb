@@ -16,4 +16,5 @@ class RandomPage
   text_field(:search_input, id: 'searchInput')
   button(:search_button, id: 'searchButton')
   div(:input_method, class: 'imeselector imeselector-toggle')
+  div(:input_method_selector_menu, class: 'imeselector-menu')
 end
