@@ -10,6 +10,10 @@ Then(/^I should see the input method keyboard icon at the bottom right$/) do
   on(RandomPage).input_method_element.should be_visible
 end
 
-Then(/^I should see the dropdown menu with the a list of keymaps$/) do
+Then(/^I should see the dropdown menu with a list of keymaps$/) do
   on(RandomPage).input_method_selector_menu_element.should be_visible
+end
+
+Then(/^I should see names of languages in it$/) do
+  on(RandomPage).input_method_language_list_element.should be_visible
 end
