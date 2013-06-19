@@ -1,5 +1,5 @@
 # Feature files that end with "_readonly.feature" should be read only, so they could be run at en.wikipedia.org
-@en.wikipedia.org
+@en.wikipedia.beta.wmflabs.org @test2.wikipedia.org @login
 Feature: Math
 
   Scenario: Display simple math
@@ -9,4 +9,4 @@ Feature: Math
       And I click Preview
     Then the page should contain an img tag
       And alt for that img should be 3 + 2
-      And src for that img should come from //upload.wikimedia.org/math/
+      And src for that img should come from //upload
