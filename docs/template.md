@@ -164,7 +164,7 @@
       <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
       <triggers class="vector">
         <hudson.triggers.TimerTrigger>
-          <spec>0 20,23 * * *</spec>
+          <spec>0 3,18 * * *</spec>
         </hudson.triggers.TimerTrigger>
       </triggers>
       <concurrentBuild>false</concurrentBuild>
