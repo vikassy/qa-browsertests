@@ -33,6 +33,9 @@
 ## browsertests-commons.wikimedia.beta.wmflabs.org-windows-internet_explorer_9
 - Browser Label: internet_explorer_9
 
+## browsertests-commons.wikimedia.beta.wmflabs.org-windows-internet_explorer_10
+- Browser Label: internet_explorer_10
+
 
 
 # browsertests-en.wikipedia.beta.wmflabs.org
@@ -61,6 +64,9 @@
 ## browsertests-en.wikipedia.beta.wmflabs.org-windows-internet_explorer_9
 - Browser Label: internet_explorer_9
 
+## browsertests-en.wikipedia.beta.wmflabs.org-windows-internet_explorer_10
+- Browser Label: internet_explorer_10
+
 
 
 # browsertests-en.wikipedia.org
@@ -88,6 +94,9 @@
 
 ## browsertests-en.wikipedia.org-windows-internet_explorer_9
 - Browser Label: internet_explorer_9
+
+## browsertests-en.wikipedia.org-windows-internet_explorer_10
+- Browser Label: internet_explorer_10
 
 
 
@@ -146,3 +155,6 @@
 
 ## browsertests-test2.wikipedia.org-windows-internet_explorer_9
 - Browser Label: internet_explorer_9
+
+## browsertests-test2.wikipedia.org-windows-internet_explorer_10
+- Browser Label: internet_explorer_10
