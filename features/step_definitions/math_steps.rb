@@ -1,7 +1,7 @@
 
 Given(/^I am editing page that does not exist$/) do
   step 'I am at page that does not exist'
-  step 'I click link Create'
+  step 'I click link Create source'
 end
 
 When(/^I type (.+)$/) do |write_text|

@@ -11,7 +11,7 @@ Feature: Page
 
   Scenario: Prepare to start a new page using the URL
     Given I am at page that does not exist
-    When I click link Create
+    When I click link Create source
     Then edit page should open
       And text box with page text should be there
       And Save button should be there
@@ -21,7 +21,7 @@ Feature: Page
 
   Scenario: Start a new page using the URL
     Given I am at page that does not exist
-    When I click link Create
+    When I click link Create source
       And I enter article text
       And I click Save page button
     Then newly created page should open
