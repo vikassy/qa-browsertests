@@ -2,14 +2,14 @@ Given(/^I am at my user page$/) do
   visit(VisualEditorPage)
 end
 
-When /^I click Review and Save$/ do
+When(/^I click Review and Save$/) do
   on(VisualEditorPage) do |page|
     page.container_disabled_element.when_not_visible.should_not exist
     page.review_and_save_element.when_visible.click
   end
 end
 
-When /^I click Looks good to me$/ do
+When(/^I click Looks good to me$/) do
   on(VisualEditorPage) do |page|
     page.diff_view_element.when_visible.should be_visible
     page.looks_good_element.click
