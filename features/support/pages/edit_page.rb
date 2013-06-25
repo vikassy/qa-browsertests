@@ -13,8 +13,8 @@ class EditPage
   a(:read, text: 'Read')
   a(:reference, text: 'Reference')
   button(:save, id: 'wpSave')
-  a(:sig, text: 'Signature and timestamp')
   button(:show_changes, id: 'wpDiff')
+  a(:sig, text: 'Signature and timestamp')
   a(:special, text: 'Special characters')
   a(:view_history, text: 'View history')
 end

@@ -7,8 +7,8 @@ class LoginPage
   div(:feedback, class: 'errorbox')
   button(:login, id: 'wpLoginAttempt')
   text_field(:password, id: 'wpPassword1')
-  a(:phishing, text: 'phishing')
   a(:password_strength, text: 'password strength')
+  a(:phishing, text: 'phishing')
   text_field(:username, id: 'wpName1')
 
   def logged_in_as_element

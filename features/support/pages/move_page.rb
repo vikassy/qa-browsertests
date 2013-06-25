@@ -1,13 +1,13 @@
 class MovePage
   include PageObject
 
+  checkbox(:leave_redirect, id: 'wpLeaveRedirect')
+  button(:move_page, name: 'wpMove')
   select(:namespace, id: 'wpNewTitleNs')
   text_field(:new_title, id: 'wpNewTitleMain')
   text_field(:reason, id: 'wpReason')
-  checkbox(:leave_redirect, id: 'wpLeaveRedirect')
-  checkbox(:watch_source, id: 'watch')
-  button(:move_page, name: 'wpMove')
   div(:redirect_content, id: 'contentSub')
+  checkbox(:watch_source, id: 'watch')
 
   def old_page_link_element(text)
     @browser.a(text: text)
