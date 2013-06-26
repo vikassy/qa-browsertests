@@ -120,10 +120,12 @@ Then(/^the the new page should have the correct text$/) do
   end
 end
 
-Then(/^the old page should display a redirect to the new page$/) do
-  on(MovePage).moved_page_link_element(@does_not_exist_page_name).when_present.click
-  @browser.text.should match(/Moved/)
-  @browser.text.should_not match(/Redirect page/)
+Then(/^the old page should display a redirect to the new page$/) do 
+  on(MovePage) do |page|
+    page.moved_page_link_element(@does_not_exist_page_name).when_present.click
+    page.body_content.should match(/Moved/)
+    page.body_content.should_not match(/Redirect page/)
+  end
 end
 
 

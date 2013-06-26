@@ -1,6 +1,7 @@
 class MovePage
   include PageObject
 
+  div(:body_content, id: 'content')
   checkbox(:leave_redirect, id: 'wpLeaveRedirect')
   button(:move_page, name: 'wpMove')
   select(:namespace, id: 'wpNewTitleNs')
