@@ -28,8 +28,7 @@ When(/^I enter title$/) do
   on(DescribePage).title = "Title #{Random.new.rand}"
 end
 When(/^I navigate to Upload Wizard$/) do
-  # TODO: add more checks for this page
-  visit(UploadWizardPage).tutorial_map.should be_true
+  visit UploadWizardPage
 end
 When(/^thumbnail should be visible$/) do
   on(ReleaseRightsPage).thumbnail_element.should be_visible

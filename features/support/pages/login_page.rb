@@ -19,5 +19,6 @@ class LoginPage
     self.username = username
     self.password = password
     login
+    username_displayed_element.wait_until_present
   end
 end
