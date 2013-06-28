@@ -172,7 +172,7 @@
         <hudson.tasks.Shell>
           <command>
     export BROWSER_LABEL=${BROWSER_LABEL}
-    export MEDIAWIKI_URL=http://${MEDIAWIKI_URL}/wiki/
+    export MEDIAWIKI_URL=https://${MEDIAWIKI_URL}/wiki/
     export ENVIRONMENT=cloudbees
 
     curl -s -o use-ruby https://repository-cloudbees.forge.cloudbees.com/distributions/ci-addons/ruby/use-ruby
