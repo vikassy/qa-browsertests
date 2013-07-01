@@ -21,6 +21,9 @@ end
 When(/^I click This file is my own work$/) do
   on(ReleaseRightsPage).select_my_own_work
 end
+When(/^I enter category$/) do
+  on(DescribePage).category = 'Test'
+end
 When(/^I enter description$/) do
   on(DescribePage).description = 'description'
 end

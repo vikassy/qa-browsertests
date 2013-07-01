@@ -7,6 +7,7 @@ class DescribePage
   end
   page_url url
 
+  text_field(:category, id: 'categories0')
   textarea(:description, name: /^description/)
   div(:next_parent, id: 'mwe-upwiz-stepdiv-details')
   span(:next) do |page|

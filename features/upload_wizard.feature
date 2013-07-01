@@ -41,6 +41,7 @@ Feature: UploadWizard
       And I click Next button at Release rights page
       And I enter title
       And I enter description
+      And I enter category
       And I click Next button at Describe page
     Then Use page should open
       And Upload more files button should be there
