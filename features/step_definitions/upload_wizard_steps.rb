@@ -37,16 +37,19 @@ When(/^thumbnail should be visible$/) do
   on(ReleaseRightsPage).thumbnail_element.should be_visible
 end
 When(/^upload file (.+)$/) do |file_name|
+  require 'tempfile'
+  path = "#{Dir.tmpdir}/#{file_name}"
+
   require 'chunky_png'
-  ChunkyPNG::Image.new(Random.new.rand(255), Random.new.rand(255), Random.new.rand(255)).save file_name
-  path = Dir.pwd + '/' + file_name
+  ChunkyPNG::Image.new(Random.new.rand(255), Random.new.rand(255), Random.new.rand(255)).save path
+
   if @browser.driver.browser == :chrome
     @browser.execute_script 'document.getElementsByName("file")[0].removeAttribute("class");'
     @browser.execute_script 'document.getElementsByName("file")[0].removeAttribute("style");'
   end
+
   on(UploadPage).select_file = path
 end
-
 Then(/^(.+) checkbox should be there$/) do |_|
   on(LearnPage).skip_element.should exist
 end
