@@ -22,6 +22,7 @@ end
 
 When(/^I click Save page$/) do
   on(VisualEditorPage) do |page|
+     sleep 2 # blame Chris for this!
     page.save_disabled_element.wait_while_present
     page.save_page_element.when_present.click
   end
