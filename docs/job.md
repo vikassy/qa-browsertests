@@ -17,7 +17,7 @@
     export MEDIAWIKI_URL=(url)
 
     curl -s -o use-ruby https://repository-cloudbees.forge.cloudbees.com/distributions/ci-addons/ruby/use-ruby
-    RUBY_VERSION=2.0.0-p195 \
+    RUBY_VERSION=2.0.0-p247 \
       source ./use-ruby
 
     gem install bundler --no-ri --no-rdoc
