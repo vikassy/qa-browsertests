@@ -1,6 +1,7 @@
 @sandbox.translatewiki.net
 Feature: Universal Language Selector User language selector
 
+  @test2.wikipedia.org
   Scenario: Open Language selector
     Given I visit a random page
     When I click language selector trigger element
