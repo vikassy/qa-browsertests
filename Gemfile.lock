@@ -32,8 +32,8 @@ GEM
       watir-webdriver (>= 0.6.4)
     page_navigation (0.9)
       data_magic (>= 0.14)
-    parallel (0.7.0)
-    parallel_tests (0.13.3)
+    parallel (0.7.1)
+    parallel_tests (0.15.0)
       parallel
     rake (10.1.0)
     rspec-expectations (2.13.0)
