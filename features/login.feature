@@ -33,4 +33,4 @@ Feature: Log in
   @login
   Scenario: Log in with valid credentials
     When Log in as Selenium_user
-    Then there should be text Selenium user
+    Then there should be a link to Selenium user

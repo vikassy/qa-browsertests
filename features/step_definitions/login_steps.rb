@@ -33,7 +33,7 @@ end
 Then(/^Password element should be there$/) do
   on(LoginPage).password_element.should exist
 end
-Then(/^there should be text (.+)$/) do |text|
+Then(/^there should be a link to (.+)$/) do |text|
   on(LoginPage).username_displayed_element.when_present.text.should == text
 end
 Then(/^Username element should be there$/) do
