@@ -11,7 +11,7 @@ When(/^I click Edit for VisualEditor$/) do
 end
 
 When(/^I click Reference$/) do
-  on(VisualEditorPage).ve_references_element.click
+  on(VisualEditorPage).ve_references_element.when_present.click
 end
 
 When(/^I enter (.+) into Content box$/) do |content|
