@@ -27,6 +27,7 @@ When(/^I click Remove template$/) do
 end
 
 When(/^I click Transclusion$/) do
+  sleep 2 #fix for Chrome see https://code.google.com/p/selenium/issues/detail?id=2766 https://wmf.ci.cloudbees.com/job/browsertests-test2.wikipedia.org-linux-chrome/438/testReport/junit/(root)/VisualEditor%20Transclusion/Add_parameter_to_template/
   on(VisualEditorPage).transclusion_element.when_present.click
 end
 

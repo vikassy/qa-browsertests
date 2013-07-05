@@ -3,7 +3,8 @@ Given(/^I can see the References User Interface$/) do
 end
 
 When(/^I click Create new source$/) do
-  on(VisualEditorPage).create_new_element.click
+	sleep 2 #fix for Chrome see https://code.google.com/p/selenium/issues/detail?id=2766
+  on(VisualEditorPage).create_new_element.when_present.click
 end
 
 When(/^I click Edit for VisualEditor$/) do
