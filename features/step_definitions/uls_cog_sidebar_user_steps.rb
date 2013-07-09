@@ -35,6 +35,10 @@ When(/^I click Cancel$/) do
   on(InterlanguagePage).cancel_element.click
 end
 
+Then(/^I click Enable input$/) do
+  on(InterlanguagePage).enable_input_element.when_visible.click
+end
+
 When(/^I click Fonts$/) do
   on(InterlanguagePage).fonts_settings
 end
@@ -68,7 +72,7 @@ Then(/^I can disable input methods$/) do
 end
 
 Then(/^I can enable input methods$/) do
-  on(InterlanguagePage).enable_input_methods_element.when_visible.should be_visible
+  on(InterlanguagePage).enable_input_element.when_visible.should be_visible
 end
 
 Then(/^I can navigate back to Input Settings$/) do

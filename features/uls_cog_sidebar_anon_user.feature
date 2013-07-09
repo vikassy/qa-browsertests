@@ -58,6 +58,7 @@ Feature: ULS cog behaviour on the side-bar for logged in users
   Scenario: More languages
     Given I navigate to the anonymous Language Settings panel
       And I click Input
+      And I click Enable input
     When I click the button with the ellipsis
     Then I see Worldwide
       And I see Language Search

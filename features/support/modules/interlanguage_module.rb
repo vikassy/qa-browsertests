@@ -11,7 +11,7 @@ module InterlanguagePageModule
   button(:default_language_button, class: 'button uls-language-button down')
   button(:disable_input_methods, class: 'active green button uls-input-toggle-button')
   button(:ellipsis_button, class: 'uls-more-languages button')
-  button(:enable_input_methods, class: 'active green button uls-input-toggle-button')
+  button(:enable_input, class: 'active green button uls-input-toggle-button')
   a(:english_link, text: 'English')
   button(:fonts_button, id: 'uls-display-settings-fonts-tab')
   button(:fonts_settings, id: 'uls-display-settings-fonts-tab')
