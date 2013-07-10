@@ -1,3 +1,5 @@
+require "page-object"
+
 module InterlanguagePageModule
   include PageObject
 
