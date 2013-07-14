@@ -146,3 +146,7 @@ end
 Then(/^a font selectbox appears for content$/) do
   on(InterlanguagePage).content_font_selectbox_element.should be_visible
 end
+
+Then(/^I should see the How to use link near the Malayalam transliteration item$/) do
+  on(InterlanguagePage).how_to_use_ml_transliteration_element.should be_visible
+end

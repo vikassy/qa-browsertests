@@ -26,4 +26,5 @@ module InterlanguagePageModule
   a(:talk, text: 'Discussion')
   select_list(:ui_font_selectbox, id: 'ui-font-selector')
   span(:x, id: 'languagesettings-close')
+  a(:how_to_use_ml_transliteration, href: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/ml-transliteration')
 end

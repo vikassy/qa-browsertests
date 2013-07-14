@@ -45,6 +45,15 @@ Feature: ULS cog behaviour on the side-bar for logged in users
     Then I can enable input methods
       And I can disable input methods
 
+  Scenario: How to use link appears in the Input settings panel
+    Given I navigate to the anonymous Language Settings panel
+    When I click Input
+      And I click Enable input
+      And I click the button with the ellipsis
+      And in the language filter I type ml
+      And I click on the link to select Malayalam
+    Then I should see the How to use link near the Malayalam transliteration item
+
   Scenario: Fonts default settings and display
     Given I navigate to the anonymous Language Settings panel
     When I click Fonts
