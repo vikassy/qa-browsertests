@@ -5,7 +5,7 @@ class ArticlePage
   page_url URL.url('<%=params[:page_name]%>')
 
   a(:actions_link) do |page|
-    page.actions_element.a
+    page.actions_element.element.a
   end
   div(:actions, id: 'p-cactions')
   a(:discussion, text: 'Discussion')

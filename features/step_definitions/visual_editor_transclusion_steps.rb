@@ -33,7 +33,7 @@ end
 
 When(/^I enter (.+) in the parameter box$/) do |param_value|
   on(VisualEditorPage) do |page| 
-      page.parameter_box_element.wait_until_present
+      page.parameter_box_element.when_present
       page.parameter_box=param_value
   end
 end

@@ -17,9 +17,9 @@ Then(/^the page should contain an img tag$/) do
 end
 
 Then(/^alt for that img should be (.+)$/) do |alt|
-  on(EditPage).math_image_element.alt.should == alt
+  on(EditPage).math_image_element.element.alt.should == alt
 end
 
 Then(/^src for that img should come from (.+)$/) do |src|
-  on(EditPage).math_image_element.src.should match Regexp.escape(src)
+  on(EditPage).math_image_element.element.src.should match Regexp.escape(src)
 end

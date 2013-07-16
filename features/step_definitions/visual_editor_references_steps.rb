@@ -16,7 +16,7 @@ When(/^I click Reference$/) do
 end
 
 When(/^I enter (.+) into Content box$/) do |content|
-  on(VisualEditorPage).content_box_element.wait_until_present
+  on(VisualEditorPage).content_box_element.when_present
   on(VisualEditorPage).content_box=content
 end
 

@@ -22,8 +22,7 @@ end
 
 When(/^I click Save page$/) do
   on(VisualEditorPage) do |page|
-     sleep 2 # blame Chris for this!
-    page.save_disabled_element.wait_while_present
+    sleep 2 # blame Chris for this!
     page.save_page_element.when_present.click
   end
 end
@@ -41,7 +40,7 @@ end
 
 When(/^I click Return to save form$/) do
   on(VisualEditorPage) do |page|
-    page.diff_view_element.wait_until_present
+    page.diff_view_element.when_present
     page.return_to_save_element.when_present.click
   end
 end
