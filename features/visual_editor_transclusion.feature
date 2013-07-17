@@ -16,7 +16,7 @@ Feature: VisualEditor Transclusion
   Scenario: Add parameter to template
     Given I have added a template
     When I enter x in the parameter box
-      And I click Add parameter
+      And I add the parameter
     Then I should see an input text area
       And I should see the Apply changes button
 

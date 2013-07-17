@@ -23,3 +23,9 @@ end
 Then(/^I should see Insert reference button enabled$/) do
   on(VisualEditorPage).insert_reference_element.should be_visible
 end
+
+Then(/^I should see the second Apply changes button$/) do
+    sleep 2
+  on(VisualEditorPage).apply_changes_new_frame_element.should be_visible
+end
+

@@ -11,4 +11,4 @@ Feature: VisualEditor References
     Given I can see the References User Interface
     When I enter THIS IS CONTENT into Content box
       And I click Create new source
-    Then I should see Insert reference button enabled
+    Then I should see the second Apply changes button

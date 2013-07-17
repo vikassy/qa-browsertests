@@ -5,7 +5,7 @@ end
 Given(/^I have added a parameter to a template$/) do
   step 'I have added a template'
   step 'I enter x in the parameter box'
-  step 'I click Add parameter'
+  step 'I add the parameter'
 end
 
 Given(/^I have added a template$/) do 
@@ -14,7 +14,7 @@ Given(/^I have added a template$/) do
   on(VisualEditorPage).add_template_element.when_present.click
 end
 
-When(/^I click Add parameter$/) do
+When(/^I add the parameter$/) do
   on(VisualEditorPage).add_parameter_element.when_present.click
 end
 
@@ -39,7 +39,7 @@ When(/^I enter (.+) in the parameter box$/) do |param_value|
 end
 
 Then(/^I should see a list of template suggestions$/) do
-  on(VisualEditorPage).suggestion_list_element.should be_visible
+  on(VisualEditorPage).suggestion_list_element.when_present.should be_visible
 end
 
 Then(/^I should be able to click the Add template button$/) do
@@ -54,5 +54,5 @@ Then(/^I should see an input text area$/) do
 end
 
 Then(/^I should see the Apply changes button$/) do
-  on(VisualEditorPage).apply_changes_element.should be_visible
+  on(VisualEditorPage).apply_changes_element.when_present.should be_visible
 end

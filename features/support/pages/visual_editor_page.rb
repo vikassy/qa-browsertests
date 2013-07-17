@@ -23,7 +23,7 @@ class VisualEditorPage
   span(:transclusion, class: 've-ui-buttonTool-icon ve-ui-icon-template')
 
   in_frame(:index => 0) do |frame|
-    span(:add_parameter, text: 'Add parameter', frame: frame)
+    span(:add_parameter, class: 've-ui-mwParameterResultWidget-name', frame: frame)
     span(:add_template, text: 'Add template', frame: frame)
     span(:apply_changes, text: 'Apply changes', frame: frame)
     text_field(:content_box, index: 0, frame: frame)
@@ -40,5 +40,9 @@ class VisualEditorPage
     list_item(:template_list_item, text: 'S', frame: frame)
     div(:title, class: 've-ui-window-title', frame: frame)
     text_area(:transclusion_textarea, index: 0, frame: frame)
+  end
+
+  in_frame(:index => 1) do |frame|
+    span(:apply_changes_new_frame, text: 'Apply changes', frame: frame)
   end
 end
