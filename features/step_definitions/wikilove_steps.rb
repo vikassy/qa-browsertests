@@ -37,3 +37,7 @@ end
 Then(/^I should see the message text field$/) do
   on(WikilovePage).wikilove_message_element.should be_visible
 end
+
+Then(/^Wikilove window appears$/) do
+  on(WikilovePage).wikilove_window_element.should be_visible
+end

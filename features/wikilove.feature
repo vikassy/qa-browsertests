@@ -6,6 +6,9 @@ Feature: Wikilove
     When I visit the User page of Selenium_user2
       And I click Wikilove
 
+  Scenario: Wikilove window appears
+    Then Wikilove window appears
+
   Scenario: Wikilove barnstar options
     When I click Barnstars
     Then I should see the barnstars selectbox

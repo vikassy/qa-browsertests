@@ -17,4 +17,5 @@ class WikilovePage
   div(:kittens, text: 'Kittens')
   text_area(:wikilove_message, id: 'mw-wikilove-message')
   div(:wikilove_spinner, id: 'mw-wikilove-image-preview-spinner')
+  div(:wikilove_window, class: 'ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable')
 end
