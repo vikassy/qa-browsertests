@@ -56,6 +56,6 @@ Then(/^Page text should contain the string$/) do
   on(VisualEditorPage).page_text_element.when_present.text.should match Regexp.escape("Editing with #{@does_not_exist_page_name}")
 end
 
-Then(/^textbox with wikisource appears$/) do
+Then(/^textbox with source text appears$/) do
  on(EditPage).article_text_element.should exist
 end
