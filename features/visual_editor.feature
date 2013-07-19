@@ -6,7 +6,8 @@ Feature: VisualEditor
     When I am at random page
       And I click the Edit link on the wiki page
     Then Edit Source page should open
-
+       And textbox with wikisource appears
+   
   @login
   Scenario: Basic edit
     Given I am logged in
