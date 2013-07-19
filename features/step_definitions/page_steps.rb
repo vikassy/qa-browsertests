@@ -52,13 +52,15 @@ Given(/^I create the page to be moved$/)  do
 end
 
 When(/^I click Move$/) do
-  on(ArticlePage).actions_link
-  on(ArticlePage).move_link
+  on(ArticlePage) do |page|
+    page.actions_link
+    page.move_link
+  end
 end
 
-Then(/^I should be on a page that says Move newly created page$/) do
+Then(/^I should be on a page Move newly created page$/) do
   @browser.url.should match Regexp.escape('Special:MovePage')
-  @browser.text.should match Regexp.escape("Move page: #{@does_not_exist_page_name}")
+  on(ArticlePage).page_text.should match Regexp.escape("Move page: #{@does_not_exist_page_name}")
 end
 
 Then(/^I should see a Namespace selectbox$/) do
@@ -100,17 +102,19 @@ When(/^I click Move page$/) do
   on(MovePage).move_page
 end
 
-Then(/^I should be on a page that says Move succeeded$/) do
-  @browser.text.should match Regexp.escape('Move succeeded')
+Then(/^I should be on a page that says (.+)$/) do |success_message|
+  on(ArticlePage).page_text.should match Regexp.escape(success_message)
 end
 
 Then(/^I should have a link to the old page title and a link to the new page title$/) do
-  on(MovePage).old_page_link_element(@does_not_exist_page_name).when_present.should exist
-  on(MovePage).moved_page_link_element(@does_not_exist_page_name).when_present.should exist
+  on(MovePage) do |page|
+    page.old_page_link_element(@does_not_exist_page_name).when_present.should exist
+    page.moved_page_link_element(@does_not_exist_page_name).when_present.should exist
+  end
 end
 
 Then(/^I should see the text A redirect has been created$/) do
-  @browser.text.should match Regexp.escape('A redirect has been created')
+  on(ArticlePage).page_text.should match Regexp.escape('A redirect has been created')
 end
 
 Then(/^the the new page should have the correct text$/) do
@@ -127,6 +131,3 @@ Then(/^the old page should display a redirect to the new page$/) do
     page.body_content.should_not match(/Redirect page/)
   end
 end
-
-
-

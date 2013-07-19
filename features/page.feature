@@ -38,7 +38,7 @@ Feature: Page
       And I am starting a page to be moved
       And I create the page to be moved
     When I click Move
-    Then I should be on a page that says Move newly created page
+    Then I should be on a page Move newly created page
       And I should see a Namespace selectbox
       And I should see a To new title textbox
       And I should see a Reason textarea
@@ -51,7 +51,7 @@ Feature: Page
     And I have clicked Move on the newly created page
     When I make a new page name for the moved page
       And I click Move page
-    Then I should be on a page that says Move succeeded
+    Then I should be on a page that says has been moved
       And I should see the text A redirect has been created
       And I should have a link to the old page title and a link to the new page title
       And the the new page should have the correct text
