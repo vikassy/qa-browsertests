@@ -1,8 +1,8 @@
 Given(/^I can see the References User Interface$/) do
-  on(VisualEditorPage).ref_body.should match Regexp.escape('Insert reference')
+  on(VisualEditorPage).ref_body.should match Regexp.escape('Reference')
 end
 
-When(/^I click Create new source$/) do
+When(/^I click Insert reference$/) do
 	sleep 2 #fix for Chrome see https://code.google.com/p/selenium/issues/detail?id=2766
   on(VisualEditorPage).create_new_element.when_present.click
 end
@@ -24,8 +24,7 @@ Then(/^I should see Insert reference button enabled$/) do
   on(VisualEditorPage).insert_reference_element.should be_visible
 end
 
-Then(/^I should see the second Apply changes button$/) do
-    sleep 2
-  on(VisualEditorPage).apply_changes_new_frame_element.should be_visible
+Then(/^link to references dialog should be visible$/) do
+  on(VisualEditorPage).refs_link_element.should be_visible
 end
 

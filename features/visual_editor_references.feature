@@ -10,5 +10,5 @@ Feature: VisualEditor References
   Scenario: Type into boxes
     Given I can see the References User Interface
     When I enter THIS IS CONTENT into Content box
-      And I click Create new source
-    Then I should see the second Apply changes button
+      And I click Insert reference
+    Then link to references dialog should be visible
