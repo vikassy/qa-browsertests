@@ -10,7 +10,7 @@ class AFTv5Page
   a(:all_comments, text: /All comments/)
   a(:back_to_yesno, text: 'Back to step 1')
   span(:create_account, text: 'Create an account')
-  a(:edit, text: 'Edit')
+  a(:edit, text: 'Edit source')
   a(:feedback_page, text: 'feedback page')
   a(:helpful_feedback, href: 'http://en.wikipedia.org/wiki/Wikipedia:Feedback_guidelines', text: 'helpful feedback')
   text_area(:input_area, id: 'articleFeedbackv5-find-feedback')
