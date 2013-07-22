@@ -21,6 +21,7 @@ class VisualEditorPage
   span(:second_save_page, class: 've-ui-labeledElement-label', text: 'Save page', index: 1)
   span(:ve_link_icon, class: 've-ui-buttonTool-icon ve-ui-icon-link')
   span(:ve_references, class: 've-ui-buttonTool-icon ve-ui-icon-reference')
+  div(:visual_editor_toolbar, class: 've-ui-toolbar-tools')
   span(:transclusion, class: 've-ui-buttonTool-icon ve-ui-icon-template')
 
   in_frame(:index => 0) do |frame|

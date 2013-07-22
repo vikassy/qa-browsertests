@@ -7,7 +7,14 @@ Feature: VisualEditor
       And I click the Edit link on the wiki page
     Then Edit Source page should open
       And textbox with source text appears
-   
+
+  Scenario: Visual editor appears if user is logged in
+     Given I am logged in
+     When I am at random page
+       And I click the Edit link on the wiki page
+     Then Visual Editor page should open
+       And Visual Editor toolbar should appear
+
   @login
   Scenario: Basic edit
     Given I am logged in
