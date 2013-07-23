@@ -3,6 +3,7 @@
 ## Environment
 
 To run the Selenium tests you will have to install Ruby. Look at the `.ruby-version` file for the exact required version. You also have to install the latest versions of RubyGems and Firefox (the default browser in which the tests run). The easiest way to install Ruby on Linux/Unix is [RVM](https://rvm.io/) and on Windows [RubyInstaller](http://rubyinstaller.org/).
+ALERT: On Windows you must use Ruby 1.9.3 for now because cucumber/gherkin library currently doesn't work with Ruby 2.x.x.
 
 Clone the repository, `cd` into it, update RubyGems and install the required RubyGems:
 
