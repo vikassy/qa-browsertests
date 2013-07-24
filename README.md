@@ -24,7 +24,14 @@ By default the tests run at en.wikipedia.beta.wmflabs.org. If you want to run th
 
 The test run creates an HTML report in `reports/` and an XML report (for Jenkins) in `reports/junit`.
 
-To run a single test enter `bundle exec cucumber features/FEATURE_NAME.feature`.
+To run a single test file enter `bundle exec cucumber features/FEATURE_NAME.feature`.
+
+To run a single test scenario, put a colon and the line number (NN) on which the scenario begins after the file name: `bundle exec cucumber features/FEATURE_NAME.feature:NN`.
+
+By default, the browser will close itself at the end of every scenario. If you want the browser to stay open, set the environment variable KEEP_BROWSER_OPEN to `true`:
+
+    export KEEP_BROWSER_OPEN=true # Linux/Unix
+    set KEEP_BROWSER_OPEN=true # Windows
 
 ## Sites
 
