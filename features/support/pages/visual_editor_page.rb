@@ -11,7 +11,7 @@ class VisualEditorPage
   a(:edit_ve, text: 'Edit')
   div(:insert_references, class: 've-ui-window-title')
   span(:looks_good, class: 've-ui-labeledElement-label', text: 'Looks good to me')
-  checkbox(:minor_edit, id: 've-init-mw-viewPageTarget-saveDialog-minorEdit')
+  checkbox(:minor_edit, id: 'wpMinoredit')
   div(:page_text, id: 'mw-content-text')
   a(:refs_link, title: 'Reference')
   span(:return_to_save, class: 've-ui-labeledElement-label', text: 'Return to save form')
