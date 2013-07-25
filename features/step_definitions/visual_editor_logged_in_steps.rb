@@ -2,10 +2,6 @@ Given(/^I am at my user page$/) do
   visit(VisualEditorPage)
 end
 
-Given(/^I am not logged in$/) do
-  # user is logged out by default, nothing to do here
-end
-
 When(/^I click Review and Save$/) do
   on(VisualEditorPage) do |page|
     page.container_disabled_element.when_not_visible.should_not exist
@@ -57,24 +53,6 @@ When(/^I edit the description of the change$/) do
   on(VisualEditorPage).describe_change_element.when_visible.send_keys("Describing with #{@does_not_exist_page_name}")
 end
 
-Then(/^Edit Source page should open$/) do
-  @browser.url.should match /&action=edit/
-  @browser.url.should_not match /\?veaction=edit/
-end
-
 Then(/^Page text should contain the string$/) do
   on(VisualEditorPage).page_text_element.when_present.text.should match Regexp.escape("Editing with #{@does_not_exist_page_name}")
-end
-
-Then(/^textbox with source text appears$/) do
-  on(EditPage).article_text_element.should exist
-end
-
-Then(/^Visual Editor page should open$/) do
-  @browser.url.should match /\?veaction=edit/
-  @browser.url.should_not match /&action=edit/
-end
-
-Then(/^Visual Editor toolbar should appear$/) do
-  on(VisualEditorPage).visual_editor_toolbar_element.when_present.should be_visible
 end
