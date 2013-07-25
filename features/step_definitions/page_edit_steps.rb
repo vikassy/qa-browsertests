@@ -1,5 +1,5 @@
 When(/^I click edit$/) do
-  on(AFTv5Page).edit
+  on(AFTv5Page).edit_element.when_present.click
 end
 When(/^I click the Read Link$/) do
   on(EditPage).read
