@@ -1,4 +1,3 @@
-@commons.wikimedia.beta.wmflabs.org
 Feature: Single-user login v2
 
   Scenario: Logging in on a wiki logs me in to all wikis on the same project
