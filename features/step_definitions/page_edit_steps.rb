@@ -5,7 +5,7 @@ When(/^I click the Read Link$/) do
   on(EditPage).read_element.when_present.click
 end
 When(/^I click the View History Link$/) do
-  on(EditPage).view_history
+  on(EditPage).view_history_element.when_present.click
 end
 
 Then(/^Edit controls should be there$/) do
