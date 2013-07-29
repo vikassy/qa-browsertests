@@ -52,7 +52,7 @@ When(/^I click the button with the ellipsis$/) do
 end
 
 When(/^I click the cog icon by Languages in the sidebar$/) do
-  on(NoInterlanguagePage).cog_element.click
+  on(NoInterlanguagePage).cog_element.when_present.click
 end
 
 When(/^I click X$/) do
