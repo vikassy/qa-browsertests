@@ -1,4 +1,4 @@
-@ie6-bug  @ie7-bug  @ie8-bug @test2.wikipedia.org @login
+@ie6-bug  @ie7-bug  @ie8-bug @ie9-bug @ie10-bug @test2.wikipedia.org @login
 Feature: VisualEditor References
 
   Background:
