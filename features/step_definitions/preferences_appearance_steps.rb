@@ -2,7 +2,7 @@ When(/^I navigate to Preferences$/) do
   visit(PreferencesPage)
 end
 When(/^I click Appearance$/) do
-  visit(PreferencesPage).appearance_link
+  visit(PreferencesPage).appearance_link_element.when_present.click
 end
 Then(/^I can select skins$/) do
   on(PreferencesAppearancePage) do |page|
