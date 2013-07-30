@@ -11,6 +11,7 @@ class VisualEditorPage
   a(:edit_ve, text: 'Edit')
   div(:insert_references, class: 've-ui-window-title')
   div(:internal_diff_view, class: 've-init-mw-viewPageTarget-saveDialog-viewer')
+  div(:ip_warning, class: 've-init-mw-viewPageTarget-toolbar-editNotices-notice')
   span(:looks_good, class: 've-ui-labeledElement-label', text: 'Looks good to me')
   checkbox(:minor_edit, id: 'wpMinoredit')
   div(:page_text, id: 'mw-content-text')

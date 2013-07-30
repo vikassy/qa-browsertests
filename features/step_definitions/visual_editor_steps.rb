@@ -31,6 +31,10 @@ When(/^I click Save page the second time$/) do
     on(VisualEditorPage).second_save_page_element.when_present.click
 end
 
+When(/^I do not see This is a minor edit$/) do
+  on(VisualEditorPage).minor_edit_element.should_not be_visible
+end
+
 When(/^I edit the page with a string$/) do
   on(VisualEditorPage) do |page|
     page.edit_ve
@@ -51,6 +55,10 @@ end
 
 When(/^I edit the description of the change$/) do
   on(VisualEditorPage).describe_change_element.when_visible.send_keys("Describing with #{@does_not_exist_page_name}")
+end
+
+When(/^I see the IP warning signs$/) do
+  on(VisualEditorPage).ip_warning.should match Regexp.escape("You are not logged in. Your IP address will be recorded in this page's edit history.")
 end
 
 Then(/^Page text should contain the string$/) do
