@@ -80,13 +80,7 @@ def sauce_browser(test_name, language)
 
   browser
 end
-def secret_yml_location
-  secret_yml_locations = ['/private/wmf/', 'config/']
-  secret_yml_locations.each do |secret_yml_location|
-    return secret_yml_location if File.exists?("#{secret_yml_location}secret.yml")
-  end
-  nil
-end
+
 def test_name(scenario)
   if scenario.respond_to? :feature
     "#{scenario.feature.name}: #{scenario.name}"
@@ -98,24 +92,17 @@ end
 config = YAML.load_file('config/config.yml')
 mediawiki_username = config['mediawiki_username']
 
-unless secret_yml_location == nil
-  secret = YAML.load_file("#{secret_yml_location}secret.yml")
-  mediawiki_password = secret['mediawiki_password']
-end
+puts "MEDIAWIKI_PASSWORD environment variable is not defined! Please export a value for that variable before proceeding." unless ENV['MEDIAWIKI_PASSWORD']
 
 Before('@language') do |scenario|
   @language = true
   @scenario = scenario
-end
-Before('@login') do
-  puts "secret.yml file at /private/wmf/ or config/ is required for tests tagged @login" if secret_yml_location == nil
 end
 
 Before do |scenario|
   @config = config
   @does_not_exist_page_name = Random.new.rand.to_s
   @mediawiki_username = mediawiki_username
-  @mediawiki_password = mediawiki_password
   @browser = browser(environment, test_name(scenario), 'default') unless @language
   $session_id = @browser.driver.instance_variable_get(:@bridge).session_id
 end

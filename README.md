@@ -12,9 +12,10 @@ Clone the repository, `cd` into it, update RubyGems and install the required Rub
     gem install bundler
     bundle install
 
-`secret.yml` file at `/private/wmf/` or `config/` is required for tests tagged `@login`. For local testing, create a user named `Selenium_user` on your local wiki and record the password in this file as
+Environment variable MEDIAWIKI_PASSWORD is required for tests tagged `@login`. For local testing, create a user named `Selenium_user` on your local wiki and export the password as the value for this variable.
+For example:
 
-    mediawiki_password: password here
+    export MEDIAWIKI_PASSWORD: password here
 
 Run the tests with `bundle exec cucumber`, this should start Firefox.
 

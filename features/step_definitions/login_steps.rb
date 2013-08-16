@@ -6,7 +6,7 @@ When(/^I log in with incorrect password$/) do
   on(LoginPage).login_with(@mediawiki_username, 'incorrect password')
 end
 When(/^I log in with incorrect username$/) do
-  on(LoginPage).login_with('incorrect username', @mediawiki_password)
+  on(LoginPage).login_with('incorrect username', ENV['MEDIAWIKI_PASSWORD'])
 end
 When(/^I log in without entering credentials$/) do
   on(LoginPage).login_with('', '')
@@ -15,7 +15,7 @@ When(/^I log in without entering password$/) do
   on(LoginPage).login_with(@mediawiki_username, '')
 end
 When(/^Log in as (.+)$/) do |username|
-  on(LoginPage).login_with(username, @mediawiki_password)
+  on(LoginPage).login_with(username, ENV['MEDIAWIKI_PASSWORD'])
 end
 
 Then(/^feedback should be (.+)$/) do |feedback|

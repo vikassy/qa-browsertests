@@ -1,5 +1,5 @@
 Given(/^I am logged in$/) do
-  visit(LoginPage).login_with(@mediawiki_username, @mediawiki_password)
+  visit(LoginPage).login_with(@mediawiki_username, ENV['MEDIAWIKI_PASSWORD'])
 end
 
 When(/^click button Continue$/) do
