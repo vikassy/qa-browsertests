@@ -16,7 +16,7 @@ Clone the repository, `cd` into it, update RubyGems and install the required Rub
 
     mediawiki_password: password here
 
-Run the tests with `bundle exec rake`, this should start Firefox.
+Run the tests with `bundle exec cucumber`, this should start Firefox.
 
 By default the tests run at en.wikipedia.beta.wmflabs.org. If you want to run the tests elsewhere, you have to set `MEDIAWIKI_URL` environment variable. For example:
 
