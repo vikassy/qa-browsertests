@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 When(/^I click on an input box$/) do
-  on(RandomPage).search_input_element.click
+  on(RandomPage).search_input=" "
 end
 
 When(/^I click on the IME keyboard icon$/) do
