@@ -7,15 +7,15 @@ require 'yaml'
 
 World(PageObject::PageFactory)
 
-def browser(environment, test_name, saucelabs_username, saucelabs_key, language)
+def browser(environment, test_name, language)
   if environment == :cloudbees
-    sauce_browser(test_name, saucelabs_username, saucelabs_key, language)
+    sauce_browser(test_name, language)
   else
     local_browser(language)
   end
 end
 def environment
-  if ENV['ENVIRONMENT'] == 'cloudbees'
+  if ENV['BROWSER_LABEL'] and ENV['SAUCE_ONDEMAND_USERNAME'] and ENV['SAUCE_ONDEMAND_ACCESS_KEY']
     :cloudbees
   else
     :local
@@ -42,10 +42,10 @@ def local_browser(language)
     Watir::Browser.new browser_label, :profile => profile
   end
 end
-def sauce_api(json, saucelabs_username, saucelabs_key)
-  %x{curl -H 'Content-Type:text/json' -s -X PUT -d '#{json}' http://#{saucelabs_username}:#{saucelabs_key}@saucelabs.com/rest/v1/#{saucelabs_username}/jobs/#{$session_id}}
+def sauce_api(json)
+  %x{curl -H 'Content-Type:text/json' -s -X PUT -d '#{json}' http://#{ENV['SAUCE_ONDEMAND_USERNAME']}:#{ENV['SAUCE_ONDEMAND_ACCESS_KEY']}@saucelabs.com/rest/v1/#{ENV['SAUCE_ONDEMAND_USERNAME']}/jobs/#{$session_id}}
 end
-def sauce_browser(test_name, saucelabs_username, saucelabs_key, language)
+def sauce_browser(test_name, language)
   config = YAML.load_file('config/config.yml')
   browser_label = config[ENV['BROWSER_LABEL']]
 
@@ -69,7 +69,7 @@ def sauce_browser(test_name, saucelabs_username, saucelabs_key, language)
   browser = Watir::Browser.new(
     :remote,
     http_client: Selenium::WebDriver::Remote::Http::Persistent.new,
-    url: "http://#{saucelabs_username}:#{saucelabs_key}@ondemand.saucelabs.com:80/wd/hub",
+    url: "http://#{ENV['SAUCE_ONDEMAND_USERNAME']}:#{ENV['SAUCE_ONDEMAND_ACCESS_KEY']}@ondemand.saucelabs.com:80/wd/hub",
     desired_capabilities: caps)
 
   browser.wd.file_detector = lambda do |args|
@@ -103,15 +103,8 @@ unless secret_yml_location == nil
   mediawiki_password = secret['mediawiki_password']
 end
 
-if ENV['ENVIRONMENT'] == 'cloudbees'
-  saucelabs_username = secret['saucelabs_username']
-  saucelabs_key = secret['saucelabs_key']
-end
-
 Before('@language') do |scenario|
   @language = true
-  @saucelabs_username = saucelabs_username
-  @saucelabs_key = saucelabs_key
   @scenario = scenario
 end
 Before('@login') do
@@ -123,14 +116,14 @@ Before do |scenario|
   @does_not_exist_page_name = Random.new.rand.to_s
   @mediawiki_username = mediawiki_username
   @mediawiki_password = mediawiki_password
-  @browser = browser(environment, test_name(scenario), saucelabs_username, saucelabs_key, 'default') unless @language
+  @browser = browser(environment, test_name(scenario), 'default') unless @language
   $session_id = @browser.driver.instance_variable_get(:@bridge).session_id
 end
 
 After do |scenario|
   if environment == :cloudbees
-    sauce_api(%Q{{"passed": #{scenario.passed?}}}, saucelabs_username, saucelabs_key)
-    sauce_api(%Q{{"public": true}}, saucelabs_username, saucelabs_key)
+    sauce_api(%Q{{"passed": #{scenario.passed?}}})
+    sauce_api(%Q{{"public": true}})
   end
   @browser.close unless ENV['KEEP_BROWSER_OPEN'] == 'true'
 end
