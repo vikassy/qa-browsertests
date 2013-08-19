@@ -35,7 +35,6 @@ Then(/^I have advanced options checkboxes$/) do
     page.toc_check_element.should exist
     page.disable_caching_check_element.should exist
     page.hidden_categories_check_element.should exist
-    page.jump_to_links_check_element.should exist
     page.justify_paragraphs_check_element.should exist
     page.auto_number_check_element.should exist
     page.collapse_sidebar_vector_check_element.should exist
