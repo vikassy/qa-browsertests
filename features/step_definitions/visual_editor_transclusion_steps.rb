@@ -2,18 +2,6 @@ Given(/^I can see the Transclusion User Interface$/) do
   on(VisualEditorPage).title.should match 'Transclusion'
 end
 
-Given(/^I have added a parameter to a template$/) do
-  step 'I have added a template'
-  step 'I enter x in the parameter box'
-  step 'I add the parameter'
-end
-
-Given(/^I have added a template$/) do 
-  step 'I click Transclusion'
-  step 'I enter S into Content box'
-  on(VisualEditorPage).add_template_element.when_present.click
-end
-
 When(/^I add the parameter$/) do
   on(VisualEditorPage).add_parameter_element.when_present.click
 end
@@ -27,7 +15,6 @@ When(/^I click Remove template$/) do
 end
 
 When(/^I click Transclusion$/) do
-  sleep 2 #fix for Chrome see https://code.google.com/p/selenium/issues/detail?id=2766 https://wmf.ci.cloudbees.com/job/browsertests-test2.wikipedia.org-linux-chrome/438/testReport/junit/(root)/VisualEditor%20Transclusion/Add_parameter_to_template/
   on(VisualEditorPage).transclusion_element.when_present.click
 end
 
@@ -43,7 +30,7 @@ Then(/^I should see a list of template suggestions$/) do
 end
 
 Then(/^I should be able to click the Add template button$/) do
-  on(VisualEditorPage).add_template_element.should be_visible
+  on(VisualEditorPage).add_template_element.click
 end
 Then(/^I should not be able to see parameter named (.+)$/) do |param_name|
   on(VisualEditorPage).template_list_item_element.should_not be_visible
