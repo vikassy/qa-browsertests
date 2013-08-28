@@ -57,6 +57,18 @@
   - Display Name: browsertests@gerrit
   - Value: https://gerrit.wikimedia.org/r/qa/browsertests
 
+  - Display Name: CirrusSearch@gerrit
+  - Value: https://gerrit.wikimedia.org/r/mediawiki/extensions/CirrusSearch
+
+  - Display Name: MobileFrontend@cloudbees
+  - Value: git://git.cloudbees.com/wmf/MobileFrontend.git
+
+  - Display Name: MobileFrontend@gerrit
+  - Value: https://gerrit.wikimedia.org/r/mediawiki/extensions/MobileFrontend
+
+  - Display Name: UniversalLanguageSelector@gerrit
+  - Value: https://gerrit.wikimedia.org/r/mediawiki/extensions/UniversalLanguageSelector
+
 ## Branch
 
 - ID: BRANCH
@@ -89,6 +101,21 @@
     - en.wikipedia.org
     - sandbox.translatewiki.net
     - test2.wikipedia.org
+
+## Folder
+
+- ID: FOLDER
+- Display Name: Folder
+- Type: Select a string among many
+- UI Mode: Dropdown list (no inline help, but more compact UI)
+- Options
+  - Display Name: (name)
+  - Value: (name)
+
+  - name:
+    - (empty)
+    - tests/acceptance/
+    - tests/browser/
 
 ## Jelly-based transformation
 
@@ -182,6 +209,7 @@
               source ./use-ruby
 
             gem install bundler --no-ri --no-rdoc
+            if [ -d "${FOLDER}" ]; then cd ${FOLDER}; fi
             bundle install
             bundle exec ${BUNDLE_EXEC}
           </command>
@@ -189,7 +217,7 @@
       </builders>
       <publishers>
         <hudson.tasks.junit.JUnitResultArchiver>
-          <testResults>reports/junit/*.xml</testResults>
+          <testResults>${FOLDER}reports/junit/*.xml</testResults>
           <keepLongStdio>false</keepLongStdio>
           <testDataPublishers/>
         </hudson.tasks.junit.JUnitResultArchiver>

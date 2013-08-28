@@ -3,6 +3,7 @@
 - Recipients: zfilipin@wikimedia.org cmcmahon@wikimedia.org
 - Repository URL: browsertests@gerrit
 - Branch: master
+- Folder: root of the repository
 
 
 
@@ -158,3 +159,71 @@
 
 ## browsertests-test2.wikipedia.org-windows-internet_explorer_10
 - Browser Label: internet_explorer_10
+
+
+
+# CirrusSearch-en.wikipedia.beta.wmflabs.org
+
+- bundle exec: cucumber --verbose --profile ci
+- Recipients: zfilipin@wikimedia.org cmcmahon@wikimedia.org
+- Repository URL: CirrusSearch@gerrit
+- MediaWiki URL: en.wikipedia.beta.wmflabs.org
+- Folder: tests/browser/
+
+
+## CirrusSearch-en.wikipedia.beta.wmflabs.org-linux-chrome
+- Browser Label: chrome
+
+
+
+# MobileFrontend
+
+- Browser Label: firefox
+- bundle exec: cucumber --verbose --profile ci
+- Recipients: zfilipin@wikimedia.org cmcmahon@wikimedia.org mgrover@wikimedia.org
+- Repository URL: MobileFrontend@gerrit
+- Folder: tests/acceptance/
+
+
+## MobileFrontend-en.m.wikipedia.beta.wmflabs.org-linux-firefox
+- MediaWiki URL: en.m.wikipedia.beta.wmflabs.org
+
+
+## MobileFrontend-en.m.wikipedia.org-linux-firefox
+- MediaWiki URL: en.m.wikipedia.org
+
+
+# UniversalLanguageSelector
+- Recipients: zfilipin@wikimedia.org cmcmahon@wikimedia.org
+- Repository URL: UniversalLanguageSelector@gerrit
+- Folder: tests/browser/
+
+## UniversalLanguageSelector-commons.wikimedia.beta.wmflabs.org-linux-chrome
+- Browser Label: chrome
+- bundle exec: cucumber --verbose --profile ci --tags @commons.wikimedia.beta.wmflabs.org
+- MediaWiki URL: commons.wikimedia.beta.wmflabs.org
+
+## UniversalLanguageSelector-commons.wikimedia.beta.wmflabs.org-linux-firefox
+- Browser Label: firefox
+- bundle exec: cucumber --verbose --profile ci --tags @commons.wikimedia.beta.wmflabs.org
+- MediaWiki URL: commons.wikimedia.beta.wmflabs.org
+
+## UniversalLanguageSelector-en.wikipedia.beta.wmflabs.org-linux-chrome
+- Browser Label: chrome
+- bundle exec: cucumber --verbose --profile ci --tags @en.wikipedia.beta.wmflabs.org
+- MediaWiki URL: en.wikipedia.beta.wmflabs.org
+
+## UniversalLanguageSelector-en.wikipedia.beta.wmflabs.org-linux-firefox
+- Browser Label: firefox
+- bundle exec: cucumber --verbose --profile ci --tags @en.wikipedia.beta.wmflabs.org
+- MediaWiki URL: en.wikipedia.beta.wmflabs.org
+
+## UniversalLanguageSelector-sandbox.translatewiki.net-linux-chrome
+- Browser Label: chrome
+- bundle exec: cucumber --verbose --profile ci --tags @sandbox.translatewiki.net
+- MediaWiki URL: sandbox.translatewiki.net
+
+## UniversalLanguageSelector-sandbox.translatewiki.net-linux-firefox
+- Browser Label: firefox
+- bundle exec: cucumber --verbose --profile ci --tags @sandbox.translatewiki.net
+- MediaWiki URL: sandbox.translatewiki.net
