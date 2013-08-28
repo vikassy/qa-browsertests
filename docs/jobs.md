@@ -227,3 +227,13 @@
 - Browser Label: firefox
 - bundle exec: cucumber --verbose --profile ci --tags @sandbox.translatewiki.net
 - MediaWiki URL: sandbox.translatewiki.net
+
+
+
+# VisualEditor-test2.wikipedia.org-linux-firefox
+- Browser Label: firefox
+- bundle exec: cucumber --verbose --profile ci --tags @test2.wikipedia.org
+- Recipients: cmcmahon@wikimedia.org jforrester@wikimedia.org rachelqa99@gmail.com zfilipin@wikimedia.org
+- Repository URL: VisualEditor@gerrit
+- MediaWiki URL: test2.wikipedia.org
+- Folder: modules/ve-mw/test/browser/

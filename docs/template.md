@@ -69,6 +69,9 @@
   - Display Name: UniversalLanguageSelector@gerrit
   - Value: https://gerrit.wikimedia.org/r/mediawiki/extensions/UniversalLanguageSelector
 
+  - Display Name: VisualEditor@gerrit
+  - Value: https://gerrit.wikimedia.org/r/mediawiki/extensions/VisualEditor
+
 ## Branch
 
 - ID: BRANCH
@@ -114,6 +117,7 @@
 
   - name:
     - (empty)
+    - modules/ve-mw/test/browser/
     - tests/acceptance/
     - tests/browser/
 
