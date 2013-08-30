@@ -8,7 +8,7 @@ require 'yaml'
 World(PageObject::PageFactory)
 
 def browser(environment, test_name, language)
-  if environment == :cloudbees
+  if environment == :saucelabs
     sauce_browser(test_name, language)
   else
     local_browser(language)
@@ -16,7 +16,7 @@ def browser(environment, test_name, language)
 end
 def environment
   if ENV['BROWSER_LABEL'] and ENV['SAUCE_ONDEMAND_USERNAME'] and ENV['SAUCE_ONDEMAND_ACCESS_KEY']
-    :cloudbees
+    :saucelabs
   else
     :local
   end
@@ -121,7 +121,7 @@ Before do |scenario|
 end
 
 After do |scenario|
-  if environment == :cloudbees
+  if environment == :saucelabs
     sauce_api(%Q{{"passed": #{scenario.passed?}}})
     sauce_api(%Q{{"public": true}})
   end

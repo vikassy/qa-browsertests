@@ -12,8 +12,6 @@
 --
 
     export BROWSER_LABEL=(label)
-    export ENVIRONMENT=(environment)
-    export BASE_URL=(url)
     export MEDIAWIKI_URL=(url)
 
     curl -s -o use-ruby https://repository-cloudbees.forge.cloudbees.com/distributions/ci-addons/ruby/use-ruby
