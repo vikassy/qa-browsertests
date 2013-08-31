@@ -19,7 +19,7 @@ class PreferencesAppearancePage
   radio_button(:mathjax_radio, id: 'mw-input-wpmath-6')
   radio_button(:modern, id: 'mw-input-wpskin-modern')
   radio_button(:monobook, id: 'mw-input-wpskin-monobook')
-  a(:restore_default_link, text:'Restore all default settings')
+  a(:restore_default_link, text:/Restore all default settings/)
   button(:save_button, text: 'Save')
   select_list(:size_select, id: 'mw-input-wpimagesize')
   select_list(:threshold_select, id: 'mw-input-wpstubthreshold')
