@@ -12,7 +12,6 @@ Feature: UploadWizard
   Scenario: Navigate to Upload page
     When I click Next button at Learn page
     Then Upload page should appear
-      And Select a media file to donate button should be there
 
   @phantomjs-bug
   Scenario: Navigate to Release rights page
