@@ -35,33 +35,33 @@ Then(/^Edit controls should not be there$/) do
   end
 end
 Then(/^Edit link should be there$/) do
-  on(EditPage).edit_element.when_visible.should be_visible
+  on(EditPage).edit_element.when_present.should be_visible
 end
 Then(/^edit page should open$/) do
   on(EditPage).save_element.when_present
   @browser.url.should match Regexp.escape('&action=edit')
 end
 Then(/^Preview button should be there$/) do
-  on(EditPage).preview_element.when_visible.should be_visible
+  on(EditPage).preview_element.when_present.should be_visible
 end
 Then(/^Preview button should not be there$/) do
   on(EditPage).preview_element.should_not exist
 end
 Then(/^Read link should be there$/) do
-  on(EditPage).read_element.when_visible.should be_visible
+  on(EditPage).read_element.when_present.should be_visible
 end
 Then(/^Save button should be there$/) do
-  on(EditPage).save_element.when_visible.should be_visible
+  on(EditPage).save_element.when_present.should be_visible
 end
 Then(/^Save button should not be there$/) do
   on(EditPage).save_element.should_not exist
 end
 Then(/^Show Changes button should be there$/) do
-  on(EditPage).show_changes_element.when_visible.should be_visible
+  on(EditPage).show_changes_element.when_present.should be_visible
 end
 Then(/^Show Changes button should not be there$/) do
   on(EditPage).show_changes_element.should_not exist
 end
 Then(/^View History link should be there$/) do
-  on(EditPage).view_history_element.when_visible.should be_visible
+  on(EditPage).view_history_element.when_present.should be_visible
 end
