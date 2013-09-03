@@ -51,7 +51,7 @@ When(/^upload file (.+)$/) do |file_name|
   on(UploadPage).select_file = path
 end
 Then(/^(.+) checkbox should be there$/) do |_|
-  on(LearnPage).skip_element.should exist
+  on(LearnPage).skip_element.when_present.should be_visible
 end
 Then(/^Describe page should open$/) do
   @browser.url.should == on(DescribePage).class.url
@@ -63,10 +63,11 @@ Then(/^Release rights page should open$/) do
   @browser.url.should == on(ReleaseRightsPage).class.url
 end
 Then(/^Select a media file to donate button should be there$/) do
-  on(UploadPage).select_file_element.should exist
+  sleep 1
+  on(UploadPage).select_file_element.when_present.should be_visible
 end
 Then(/^title text field should be there$/) do
-  on(DescribePage).title_element.should exist
+  on(DescribePage).title_element.when_present.should be_visible
 end
 Then(/^Upload more files button should be there$/) do
   on(UsePage) do |page|
