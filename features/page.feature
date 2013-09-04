@@ -29,7 +29,6 @@ Feature: Page
       And page text should be there
       And Discussion link should be there
       And Edit link should be there
-      And View History link should be there
       And unwatch element should be there
       And watch element should not be there
 
