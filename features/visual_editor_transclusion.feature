@@ -12,7 +12,7 @@ Feature: VisualEditor Transclusion
     When I enter S into Content box
     Then I should see a list of template suggestions
       And I should be able to click the Add template button
-  
+
   Scenario: Add parameter to template
     Given I can see the Transclusion User Interface
       And I enter S into Content box
@@ -33,4 +33,3 @@ Feature: VisualEditor Transclusion
     When I click Remove parameter
       And I click Remove template
     Then I should not be able to see parameter named S
-
