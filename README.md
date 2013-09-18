@@ -12,6 +12,8 @@ Clone the repository, `cd` into it, update RubyGems and install the required Rub
     gem install bundler
     bundle install
 
+If you're not using rvm to manage your Ruby versions, you will need to run the commands as root (using `sudo`).
+
 Environment variable MEDIAWIKI_PASSWORD is required for tests tagged `@login`. For local testing, create a user named `Selenium_user` on your local wiki and export the password as the value for this variable.
 For example:
 
@@ -19,7 +21,7 @@ For example:
 
 Run the tests with `bundle exec cucumber`, this should start Firefox.
 
-By default the tests run at en.wikipedia.beta.wmflabs.org. If you want to run the tests elsewhere, you have to set `MEDIAWIKI_URL` environment variable. For example:
+By default the tests run at en.wikipedia.beta.wmflabs.org. If you want to run the tests elsewhere, set the `MEDIAWIKI_URL` environment variable. For example:
 
     export MEDIAWIKI_URL=http://commons.wikimedia.beta.wmflabs.org/wiki/ # Linux/Unix
     set MEDIAWIKI_URL=http://commons.wikimedia.beta.wmflabs.org/wiki/ # Windows
@@ -39,11 +41,12 @@ By default, the browser will close itself at the end of every scenario. If you w
 
 The code repository is https://gerrit.wikimedia.org/r/#/admin/projects/qa/browsertests, the GitHub mirror is at https://github.com/wikimedia/qa-browsertests
 
-The Jenkins instance that orchestrates the tests is hosted at https://wmf.ci.cloudbees.com/
+There is a Jenkins instance that orchestrates test runs when WMF repositories are updated, it is hosted at https://wmf.ci.cloudbees.com/
+It runs the tests in multiple browsers at http://saucelabs.com/
 
-The tests are run in multiple browsers at http://saucelabs.com/
-
-Mobile tests are in the `tests/acceptance` folder of the [MobileFrontend](https://github.com/wikimedia/mediawiki-extensions-MobileFrontend) extension.
+Several MediaWiki extensions have their own browser tests:
+Mobile tests are in the `tests/acceptance` folder of the [MobileFrontend](https://github.com/wikimedia/mediawiki-extensions-MobileFrontend) extension,
+VisualEditor tests are in its `modules/ve-mw/test/browser` folder, etc.
 
 Interested? Read more at [How to contribute](http://www.mediawiki.org/wiki/QA/Browser_testing#How_to_contribute) section of Browser testing page.
 
