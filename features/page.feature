@@ -1,4 +1,4 @@
-@en.wikipedia.beta.wmflabs.org @login
+@en.wikipedia.beta.wmflabs.org @login @test2.wikipedia.org
 Feature: Page
 
   Background:

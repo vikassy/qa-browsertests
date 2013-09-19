@@ -70,37 +70,6 @@
 
 
 
-# browsertests-en.wikipedia.org
-- bundle exec: cucumber features/*_readonly.feature --verbose --profile ci --tags @en.wikipedia.org
-- MediaWiki URL: en.wikipedia.org
-
-
-## browsertests-en.wikipedia.org-linux-chrome
-- Browser Label: chrome
-
-## browsertests-en.wikipedia.org-linux-firefox
-- Browser Label: firefox
-
-## browsertests-en.wikipedia.org-windows-internet_explorer_6
-- Browser Label: internet_explorer_6
-- bundle exec: cucumber features/*_readonly.feature --verbose --profile ci --tags @en.wikipedia.org --tags ~@ie6-bug
-
-## browsertests-en.wikipedia.org-windows-internet_explorer_7
-- Browser Label: internet_explorer_7
-- bundle exec: cucumber features/*_readonly.feature --verbose --profile ci --tags @en.wikipedia.org --tags ~@ie7-bug
-
-## browsertests-en.wikipedia.org-windows-internet_explorer_8
-- Browser Label: internet_explorer_8
-- bundle exec: cucumber features/*_readonly.feature --verbose --profile ci --tags @en.wikipedia.org --tags ~@ie8-bug
-
-## browsertests-en.wikipedia.org-windows-internet_explorer_9
-- Browser Label: internet_explorer_9
-
-## browsertests-en.wikipedia.org-windows-internet_explorer_10
-- Browser Label: internet_explorer_10
-
-
-
 # browsertests-sandbox.translatewiki.net
 - bundle exec: cucumber --verbose --profile ci --tags @sandbox.translatewiki.net
 - MediaWiki URL: sandbox.translatewiki.net

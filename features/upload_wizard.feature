@@ -1,4 +1,4 @@
-@commons.wikimedia.beta.wmflabs.org @login @test2.wikipedia.org @ie6-bug  @ie7-bug  @ie8-bug
+@commons.wikimedia.beta.wmflabs.org @ie6-bug  @ie7-bug  @ie8-bug @login @test2.wikipedia.org
 Feature: UploadWizard
 
   Background:
@@ -13,7 +13,7 @@ Feature: UploadWizard
     When I click Next button at Learn page
     Then Upload page should appear
 
-  @phantomjs-bug
+
   Scenario: Navigate to Release rights page
     When I click Next button at Learn page
       And upload file image.png
@@ -21,7 +21,7 @@ Feature: UploadWizard
     Then Release rights page should open
       And thumbnail should be visible
 
-  @phantomjs-bug
+
   Scenario: Navigate to Describe page
     When I click Next button at Learn page
       And upload file image.png
@@ -31,7 +31,7 @@ Feature: UploadWizard
     Then Describe page should open
       And title text field should be there
 
-  @ie6-bug @ie7-bug @ie8-bug @phantomjs-bug
+  @ie6-bug @ie7-bug @ie8-bug
   Scenario: Navigate to Use page
     When I click Next button at Learn page
       And upload file image.png

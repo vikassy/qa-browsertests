@@ -1,4 +1,4 @@
-@test2.wikipedia.org @login
+@login @test2.wikipedia.org
 
 Feature: Hotcat
 

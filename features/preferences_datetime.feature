@@ -1,5 +1,4 @@
-# Feature files that end with "_readonly.feature" should be read only, so they could be run at en.wikipedia.org
-@en.wikipedia.beta.wmflabs.org @en.wikipedia.org @login @test2.wikipedia.org
+@en.wikipedia.beta.wmflabs.org @login @test2.wikipedia.org
 Feature: Preferences Date Time
 
   Scenario: Preferences Date Time
