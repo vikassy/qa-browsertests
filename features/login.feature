@@ -1,4 +1,4 @@
-@commons.wikimedia.beta.wmflabs.org @test2.wikipedia.org
+@en.wikipedia.beta.wmflabs.org @test2.wikipedia.org
 Feature: Log in
 
   Background:
