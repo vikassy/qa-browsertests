@@ -19,7 +19,7 @@ Then(/^Edit controls should be there$/) do
     page.italic_element.when_present.should be_visible
     page.sig_element.when_present.should be_visible
     page.link_element.when_present.should be_visible
-    page.embedded_element.when_presentshould be_visible
+    page.embedded_element.when_present.should be_visible
   end
 end
 Then(/^Edit controls should not be there$/) do
