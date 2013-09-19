@@ -70,35 +70,6 @@
 
 
 
-# browsertests-sandbox.translatewiki.net
-- bundle exec: cucumber --verbose --profile ci --tags @sandbox.translatewiki.net
-- MediaWiki URL: sandbox.translatewiki.net
-
-
-## browsertests-sandbox.translatewiki.net-linux-chrome
-- Browser Label: chrome
-
-## browsertests-sandbox.translatewiki.net-linux-firefox
-- Browser Label: firefox
-
-## browsertests-sandbox.translatewiki.net-windows-internet_explorer_6
-- Browser Label: internet_explorer_6
-- bundle exec: cucumber --verbose --profile ci --tags @sandbox.translatewiki.net --tags ~@ie6-bug
-
-## browsertests-sandbox.translatewiki.net-windows-internet_explorer_7
-- Browser Label: internet_explorer_7
-- bundle exec: cucumber --verbose --profile ci --tags @sandbox.translatewiki.net --tags ~@ie7-bug
-
-## browsertests-sandbox.translatewiki.net-windows-internet_explorer_8
-- Browser Label: internet_explorer_8
-- bundle exec: cucumber --verbose --profile ci --tags @sandbox.translatewiki.net --tags ~@ie8-bug
-
-## browsertests-sandbox.translatewiki.net-windows-internet_explorer_9
-- Browser Label: internet_explorer_9
-- bundle exec: cucumber --verbose --profile ci --tags @sandbox.translatewiki.net --tags ~@ie9-bug
-
-
-
 # browsertests-test2.wikipedia.org
 
 - bundle exec: cucumber --verbose --profile ci --tags @test2.wikipedia.org
