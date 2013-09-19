@@ -24,9 +24,9 @@ end
 
 Then(/^AFTv5 should be there$/) do
   on(AFTv5Page) do |page|
-    page.yes_element.should exist
-    page.no_element.should exist
-    page.whats_this_element.should exist
+    page.yes_element.when_present.should be_visible
+    page.no_element.when_present.should be_visible
+    page.whats_this_element.when_present.should be_visible
   end
 end
 Then(/^After saving I have links to feedback page and See all comments available$/) do
