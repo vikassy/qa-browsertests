@@ -15,11 +15,11 @@ Then(/^Edit controls should be there$/) do
     edit_page = EditPage
   end
   on(edit_page) do |page|
-    page.bold_element.should exist
-    page.italic_element.should exist
-    page.sig_element.should exist
-    page.link_element.should exist
-    page.embedded_element.should exist
+    page.bold_element.when_present.should be_visible
+    page.italic_element.when_present.should be_visible
+    page.sig_element.when_present.should be_visible
+    page.link_element.when_present.should be_visible
+    page.embedded_element.when_presentshould be_visible
   end
 end
 Then(/^Edit controls should not be there$/) do
