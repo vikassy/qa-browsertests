@@ -4,7 +4,7 @@ end
 
 When(/^I click Whats this$/) do
   on(AFTv5Page) do |page|
-    page.whats_this
+    page.whats_this_element.when_present.click
   end
 end
 When(/^I click Yes$/) do
