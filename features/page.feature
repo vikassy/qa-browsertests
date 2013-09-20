@@ -6,7 +6,7 @@ Feature: Page
 
   Scenario:Go to page that does not exist
     Given I am at page that does not exist
-    Then page text should contain Wikipedia does not have an article with this exact name
+    Then page text should contain pages
       And link Create should be there
 
   Scenario: Prepare to start a new page using the URL
