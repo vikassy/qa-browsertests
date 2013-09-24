@@ -1,5 +1,5 @@
 Given(/^I am at page that does not exist$/) do
-  visit(DoesNotExistPage, using_params: {page_name: @does_not_exist_page_name})
+  visit(DoesNotExistPage, using_params: {page_name: @random_string})
 end
 
 When(/^I click link Create source$/) do
@@ -19,7 +19,7 @@ Then(/^link Create should be there$/) do
   on(DoesNotExistPage).create_source_element.should exist
 end
 Then(/^newly created page should open$/) do
-  @browser.url.should match Regexp.escape(@does_not_exist_page_name)
+  @browser.url.should match Regexp.escape(@random_string)
 end
 Then(/^page text should be there$/) do
   on(ArticlePage).page_text.should match Regexp.escape("Starting a new page using the URL")
@@ -28,7 +28,7 @@ Then(/^page text should contain (.+)$/) do |text|
   on(DoesNotExistPage).page_text.should match Regexp.escape(text)
 end
 Then(/^page title should be there$/) do
-  on(ArticlePage).title.should match Regexp.escape(@does_not_exist_page_name)
+  on(ArticlePage).title.should match Regexp.escape(@random_string)
 end
 Then(/^text box with page text should be there$/) do
   on(EditPage).article_text_element.should exist
@@ -42,7 +42,7 @@ Then(/^unwatch element should be there$/) do
 end
 
 Given(/^I am starting a page to be moved$/)  do
-  visit(DoesNotExistPage, using_params: {page_name: @does_not_exist_page_name})
+  visit(DoesNotExistPage, using_params: {page_name: @random_string})
 end
 
 Given(/^I create the page to be moved$/)  do
@@ -60,7 +60,7 @@ end
 
 Then(/^I should be on a page Move newly created page$/) do
   @browser.url.should match Regexp.escape('Special:MovePage')
-  on(ArticlePage).page_text.should match Regexp.escape("Move page: #{@does_not_exist_page_name}")
+  on(ArticlePage).page_text.should match Regexp.escape("Move page: #{@random_string}")
 end
 
 Then(/^I should see a Namespace selectbox$/) do
@@ -84,7 +84,7 @@ Then(/^I should see a Watch source page radio button$/) do
 end
 
 Given(/^I am starting a page to be moved to a new name$/)  do
-  visit(DoesNotExistPage, using_params: {page_name: @does_not_exist_page_name})
+  visit(DoesNotExistPage, using_params: {page_name: @random_string})
 end
 
 Given(/^I have clicked Move on the newly created page$/) do
@@ -95,7 +95,7 @@ Given(/^I have clicked Move on the newly created page$/) do
 end
 
 When(/^I make a new page name for the moved page$/) do
-  on(MovePage).new_title="#{@does_not_exist_page_name} Moved"
+  on(MovePage).new_title="#{@random_string} Moved"
 end
 
 When(/^I click Move page$/) do
@@ -108,8 +108,8 @@ end
 
 Then(/^I should have a link to the old page title and a link to the new page title$/) do
   on(MovePage) do |page|
-    page.old_page_link_element(@does_not_exist_page_name).when_present.should exist
-    page.moved_page_link_element(@does_not_exist_page_name).when_present.should exist
+    page.old_page_link_element(@random_string).when_present.should exist
+    page.moved_page_link_element(@random_string).when_present.should exist
   end
 end
 
@@ -119,14 +119,14 @@ end
 
 Then(/^the the new page should have the correct text$/) do
   on(MovePage) do |page|
-    page.old_page_link_element(@does_not_exist_page_name).when_present.click
+    page.old_page_link_element(@random_string).when_present.click
     page.redirect_content.should match(/Redirect page/)
   end
 end
 
 Then(/^the old page should display a redirect to the new page$/) do
   on(MovePage) do |page|
-    page.moved_page_link_element(@does_not_exist_page_name).when_present.click
+    page.moved_page_link_element(@random_string).when_present.click
     page.body_content.should match(/Moved/)
     page.body_content.should_not match(/Redirect page/)
   end

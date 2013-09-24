@@ -103,7 +103,7 @@ end
 
 Before do |scenario|
   @config = config
-  @does_not_exist_page_name = Random.new.rand.to_s
+  @random_string = Random.new.rand.to_s
   @mediawiki_username = mediawiki_username
   @browser = browser(environment, test_name(scenario), 'default') unless @language
   $session_id = @browser.driver.instance_variable_get(:@bridge).session_id
