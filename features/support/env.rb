@@ -92,7 +92,9 @@ end
 config = YAML.load_file('config/config.yml')
 mediawiki_username = config['mediawiki_username']
 
-puts "MEDIAWIKI_PASSWORD environment variable is not defined! Please export a value for that variable before proceeding." unless ENV['MEDIAWIKI_PASSWORD']
+Before('@login') do
+  puts "MEDIAWIKI_PASSWORD environment variable is not defined! Please export a value for that variable before proceeding." unless ENV['MEDIAWIKI_PASSWORD']
+end
 
 Before('@language') do |scenario|
   @language = true
