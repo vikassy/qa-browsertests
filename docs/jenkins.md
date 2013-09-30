@@ -22,6 +22,7 @@
 
 - Jenkins > Manage Jenkins > Configure System > Global properties > Environment variables > List of key-value pairs
   - name
+    - MEDIAWIKI_USER
     - MEDIAWIKI_PASSWORD
     - SAUCE_ONDEMAND_ACCESS_KEY
     - SAUCE_ONDEMAND_USERNAME

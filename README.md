@@ -14,8 +14,10 @@ Clone the repository, `cd` into it, update RubyGems and install the required Rub
 
 If you're not using RVM to manage your Ruby versions, you will need to run the commands as root (using `sudo`).
 
-Environment variable MEDIAWIKI_PASSWORD is required for tests tagged `@login`. For local testing, create a user named `Selenium_user` on your local wiki and export the password as the value for this variable.
+Environment variables MEDIAWIKI_USER and MEDIAWIKI_PASSWORD are required for tests tagged `@login`. For local testing, create a test user on your local wiki and export the user and password as the values for those variables.
 For example:
+    export MEDIAWIKI_USER=<username here> # Linux/Unix/Mac
+    set MEDIAWIKI_USER=<username here> # Windows
 
     export MEDIAWIKI_PASSWORD=<password here> # Linux/Unix/Mac
     set MEDIAWIKI_PASSWORD=<password here> # Windows

@@ -3,7 +3,7 @@ Given(/^I am at Log in page$/) do
 end
 
 When(/^I log in with incorrect password$/) do
-  on(LoginPage).login_with(@mediawiki_username, 'incorrect password')
+  on(LoginPage).login_with(ENV['MEDIAWIKI_USER'], 'incorrect password')
 end
 When(/^I log in with incorrect username$/) do
   on(LoginPage).login_with('incorrect username', ENV['MEDIAWIKI_PASSWORD'])
@@ -12,7 +12,7 @@ When(/^I log in without entering credentials$/) do
   on(LoginPage).login_with('', '')
 end
 When(/^I log in without entering password$/) do
-  on(LoginPage).login_with(@mediawiki_username, '')
+  on(LoginPage).login_with(ENV['MEDIAWIKI_USER'], '')
 end
 When(/^Log in as (.+)$/) do |username|
   on(LoginPage).login_with(username, ENV['MEDIAWIKI_PASSWORD'])
