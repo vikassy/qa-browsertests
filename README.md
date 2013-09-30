@@ -31,6 +31,11 @@ To run a single test file enter `bundle exec cucumber features/FEATURE_NAME.feat
 
 To run a single test scenario, put a colon and the line number (NN) on which the scenario begins after the file name: `bundle exec cucumber features/FEATURE_NAME.feature:NN`.
 
+You can use a different browser with the BROWSER_LABEL env variable, the fastest is probably PhantomJS, a headless browser:
+
+  export BROWSER_LABEL=phantomjs # Linux/Unix/Mac
+  set BROWSER_LABEL=phantomjs # Windows
+
 By default, the browser will close itself at the end of every scenario. If you want the browser to stay open, set the environment variable `KEEP_BROWSER_OPEN` to `true`:
 
     export KEEP_BROWSER_OPEN=true # Linux/Unix/Mac
