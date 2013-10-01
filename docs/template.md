@@ -66,6 +66,9 @@
   - Display Name: MobileFrontend@gerrit
   - Value: https://gerrit.wikimedia.org/r/mediawiki/extensions/MobileFrontend
 
+  - Display Name: TwnMainPage@gerrit
+  - Value: https://gerrit.wikimedia.org/r/mediawiki/extensions/TwnMainPage
+
   - Display Name: UniversalLanguageSelector@gerrit
   - Value: https://gerrit.wikimedia.org/r/mediawiki/extensions/UniversalLanguageSelector
 
@@ -98,6 +101,7 @@
 
   - name:
     - commons.wikimedia.beta.wmflabs.org
+    - dev.translatewiki.net
     - en.m.wikipedia.beta.wmflabs.org
     - en.m.wikipedia.org
     - en.wikipedia.beta.wmflabs.org

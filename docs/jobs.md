@@ -133,10 +133,25 @@
 - MediaWiki URL: en.m.wikipedia.org
 
 
+# TwnMainPage
+
+
+## TwnMainPage-sandbox.translatewiki.net-linux-firefox
+- Browser Label: firefox
+- bundle exec: cucumber --verbose --profile ci --tags @sandbox.translatewiki.net
+- Recipients: zfilipin@wikimedia.org cmcmahon@wikimedia.org
+- Repository URL: TwnMainPage@gerrit
+- Branch: master
+- MediaWiki URL: sandbox.translatewiki.net
+- Folder: tests/browser/
+
+
+
 # UniversalLanguageSelector
 - Recipients: zfilipin@wikimedia.org cmcmahon@wikimedia.org
 - Repository URL: UniversalLanguageSelector@gerrit
 - Folder: tests/browser/
+
 
 ## UniversalLanguageSelector-commons.wikimedia.beta.wmflabs.org-linux-chrome
 - Browser Label: chrome
