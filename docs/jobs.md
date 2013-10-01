@@ -158,16 +158,6 @@
 - bundle exec: cucumber --verbose --profile ci --tags @en.wikipedia.beta.wmflabs.org
 - MediaWiki URL: en.wikipedia.beta.wmflabs.org
 
-## UniversalLanguageSelector-sandbox.translatewiki.net-linux-chrome
-- Browser Label: chrome
-- bundle exec: cucumber --verbose --profile ci --tags @sandbox.translatewiki.net
-- MediaWiki URL: sandbox.translatewiki.net
-
-## UniversalLanguageSelector-sandbox.translatewiki.net-linux-firefox
-- Browser Label: firefox
-- bundle exec: cucumber --verbose --profile ci --tags @sandbox.translatewiki.net
-- MediaWiki URL: sandbox.translatewiki.net
-
 
 
 # VisualEditor-test2.wikipedia.org-linux-firefox
