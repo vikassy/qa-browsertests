@@ -20,7 +20,7 @@ class RandomPage
   a(:print_export, text: 'Print/export')
   a(:printable_version, text: 'Printable version')
   li(:uls_malayalam_inscript2_item, data_ime_inputmethod: 'ml-inscript2')
-  button(:search_button, id: 'searchButton')
+  button(:search_button, id: 'mw-searchButton')
   text_field(:search_input, id: 'searchInput')
   a(:uls_trigger, class: 'uls-trigger')
 end

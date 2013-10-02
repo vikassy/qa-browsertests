@@ -14,6 +14,6 @@ Feature: Search
     Then I should land on Search Results page
 
   Scenario:  Search with accent yields result page with accent
-    Given I visit a random page
+    Given I am at random page
     When I search for África
     Then the page I arrive on has title África
