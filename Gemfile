@@ -4,9 +4,4 @@
 source 'https://rubygems.org'
 
 gem 'chunky_png'
-gem 'cucumber'
-gem 'json'
-gem 'net-http-persistent'
-gem 'page-object'
-gem 'rspec-expectations'
-gem 'syntax'
+gem 'mediawiki-selenium'
