@@ -8,6 +8,8 @@ class RandomPage
   a(:create_a_book, text: 'Create a book')
   a(:download_as_pdf, text: 'Download as PDF')
   a(:download_the_file, text: 'Download the file')
+  a(:edit_page, title: /You can edit this page/)
+  text_area(:editor_text, id: 'wpTextbox1')
   div(:input_method, class: 'imeselector imeselector-toggle')
   a(:input_method_enabled, class: 'ime-name imeselector-toggle')
   h3(:input_method_ime_list_title, class: 'ime-list-title')
