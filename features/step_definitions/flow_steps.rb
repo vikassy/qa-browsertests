@@ -6,16 +6,16 @@ When(/^I create a (.+) in Flow new topic$/) do |flow_title|
   @automated_test_marker = ' browsertest edit'
   on(FlowPage) do |page|
     page.new_topic_title_element.when_present.click
-    page.new_topic_title_element.when_present.send_keys(flow_title + @does_not_exist_page_name + @automated_test_marker)
+    page.new_topic_title_element.when_present.send_keys(flow_title + @random_string + @automated_test_marker)
   end
 end
 
 When(/^I create a (.+) into VisualEditor Flow body$/) do |flow_body|
-  on(FlowPage).new_topic_body_ve_element.when_present.send_keys(flow_body + @does_not_exist_page_name + @automated_test_marker)
+  on(FlowPage).new_topic_body_ve_element.when_present.send_keys(flow_body + @random_string + @automated_test_marker)
 end
 
 When(/^I create a (.+) into Flow body$/) do |flow_body|
-  on(FlowPage).new_topic_body_element.when_present.send_keys(flow_body + @does_not_exist_page_name + @automated_test_marker)
+  on(FlowPage).new_topic_body_element.when_present.send_keys(flow_body + @random_string + @automated_test_marker)
 end
 
 When(/^I click New topic save$/) do
@@ -27,7 +27,7 @@ Then(/^the page should contain (.+)$/) do |flow_topic|
     page.wait_until(20) do	# 10 seconds wasn't enough on ee-flow...
       page.text.include? 'just now'
     end
-    page.flow_body.should match(flow_topic + @does_not_exist_page_name + @automated_test_marker)
+    page.flow_body.should match(flow_topic + @random_string + @automated_test_marker)
   end
 end
 
