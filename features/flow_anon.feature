@@ -7,5 +7,5 @@ Feature: Create new topic anonymous
     When I create a Title of Flow Topic in Flow new topic
       And I create a Body of Flow Topic into Flow body
       And I click New topic save
-    Then the page should contain Title of Flow Topic
-      And the page should contain Body of Flow Topic
+    Then the Flow page should contain Title of Flow Topic
+      And the Flow page should contain Body of Flow Topic
