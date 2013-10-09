@@ -37,8 +37,6 @@ Then(/^I have advanced options checkboxes$/) do
     page.hidden_categories_check_element.should exist
     page.justify_paragraphs_check_element.should exist
     page.auto_number_check_element.should exist
-    page.collapse_sidebar_vector_check_element.should exist
-    page.exclude_from_experiments_check_element.should exist
   end
 end
 Then(/^I have Math options radio buttons$/) do
