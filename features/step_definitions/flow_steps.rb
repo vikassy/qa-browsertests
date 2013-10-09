@@ -22,7 +22,7 @@ When(/^I click New topic save$/) do
   on(FlowPage).new_topic_save_element.when_present.click
 end
 
-Then(/^the page should contain (.+)$/) do |flow_topic|
+Then(/^the Flow page should contain (.+)$/) do |flow_topic|
   on(FlowPage) do |page|
     page.wait_until(20) do	# 10 seconds wasn't enough on ee-flow...
       page.text.include? 'just now'
