@@ -1,6 +1,6 @@
 # browsertests
 
-- Recipients: zfilipin@wikimedia.org cmcmahon@wikimedia.org
+- Recipients: cmcmahon@wikimedia.org zfilipin@wikimedia.org
 - Repository URL: browsertests@gerrit
 - Branch: master
 - Folder: root of the repository
@@ -105,7 +105,7 @@
 # CirrusSearch-en.wikipedia.beta.wmflabs.org
 
 - bundle exec: cucumber --verbose --profile ci
-- Recipients: zfilipin@wikimedia.org cmcmahon@wikimedia.org
+- Recipients: cmcmahon@wikimedia.org neverett@wikimedia.org zfilipin@wikimedia.org
 - Repository URL: CirrusSearch@gerrit
 - MediaWiki URL: en.wikipedia.beta.wmflabs.org
 - Folder: tests/browser/
@@ -120,7 +120,7 @@
 
 - Browser Label: firefox
 - bundle exec: cucumber --verbose --profile ci
-- Recipients: zfilipin@wikimedia.org cmcmahon@wikimedia.org mgrover@wikimedia.org
+- Recipients: cmcmahon@wikimedia.org mgrover@wikimedia.org mobile-l@wikimedia.org mobile-tech@wikimedia.org zfilipin@wikimedia.org
 - Repository URL: MobileFrontend@gerrit
 - Folder: tests/acceptance/
 
@@ -139,7 +139,7 @@
 ## TwnMainPage-sandbox.translatewiki.net-linux-firefox
 - Browser Label: firefox
 - bundle exec: cucumber --verbose --profile ci --tags @sandbox.translatewiki.net
-- Recipients: zfilipin@wikimedia.org cmcmahon@wikimedia.org
+- Recipients: aaharoni@wikimedia.org cmcmahon@wikimedia.org nlaxstrom@wikimedia.org smazeland@wikimedia.org zfilipin@wikimedia.org
 - Repository URL: TwnMainPage@gerrit
 - Branch: master
 - MediaWiki URL: sandbox.translatewiki.net
@@ -148,7 +148,7 @@
 
 
 # UniversalLanguageSelector
-- Recipients: zfilipin@wikimedia.org cmcmahon@wikimedia.org
+- Recipients: aaharoni@wikimedia.org cmcmahon@wikimedia.org nlaxstrom@wikimedia.org smazeland@wikimedia.org sthottingal@wikimedia.org zfilipin@wikimedia.org
 - Repository URL: UniversalLanguageSelector@gerrit
 - Folder: tests/browser/
 
@@ -178,7 +178,7 @@
 # VisualEditor-test2.wikipedia.org-linux-firefox
 - Browser Label: firefox
 - bundle exec: cucumber --verbose --profile ci --tags @test2.wikipedia.org
-- Recipients: cmcmahon@wikimedia.org jforrester@wikimedia.org rachelqa99@gmail.com zfilipin@wikimedia.org
+- Recipients: cmcmahon@wikimedia.org jforrester@wikimedia.org zfilipin@wikimedia.org
 - Repository URL: VisualEditor@gerrit
 - MediaWiki URL: test2.wikipedia.org
 - Folder: modules/ve-mw/test/browser/
