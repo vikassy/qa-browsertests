@@ -60,6 +60,9 @@
   - Display Name: CirrusSearch@gerrit
   - Value: https://gerrit.wikimedia.org/r/mediawiki/extensions/CirrusSearch
 
+  - Display Name: Flow@gerrit
+  - Value: https://gerrit.wikimedia.org/r/mediawiki/extensions/Flow
+
   - Display Name: MobileFrontend@cloudbees
   - Value: git://git.cloudbees.com/wmf/MobileFrontend.git
 

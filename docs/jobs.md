@@ -116,6 +116,28 @@
 
 
 
+# Flow
+
+- bundle exec: cucumber --verbose --profile ci --tags @en.wikipedia.beta.wmflabs.org
+- Recipients: zfilipin@wikimedia.org cmcmahon@wikimedia.org
+- Repository URL: Flow@gerrit
+- Branch: master
+- MediaWiki URL: en.m.wikipedia.beta.wmflabs.org
+- Folder: tests/browser/
+
+## Flow-en.wikipedia.beta.wmflabs.org-linux-chrome
+- Browser Label: chrome
+
+
+## Flow-en.wikipedia.beta.wmflabs.org-linux-firefox
+- Browser Label: firefox
+
+
+## Flow-en.wikipedia.beta.wmflabs.org-linux-internet_explorer_10
+- Browser Label: internet_explorer_10
+
+
+
 # MobileFrontend
 
 - Browser Label: firefox
