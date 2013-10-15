@@ -79,5 +79,5 @@ Then(/^Upload page should appear$/) do
   @browser.url.should == on(UploadPage).class.url
 end
 Then(/^Use page should open$/) do
-  @browser.url.should == on(UsePage).class.url
+  @browser.url.should match /Special:UploadWizard/
 end
