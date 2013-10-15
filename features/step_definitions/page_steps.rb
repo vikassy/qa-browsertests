@@ -6,7 +6,7 @@ When(/^I click link Create source$/) do
   on(DoesNotExistPage).create_source
 end
 When(/^I click Save page button$/) do
-  on(EditPage).save
+  on(EditPage).save_element.when_present.click
 end
 When(/^I enter article text$/) do
   on(EditPage).article_text = "Starting a new page using the URL"

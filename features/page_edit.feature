@@ -2,7 +2,8 @@
 Feature: Edit
 
   Background:
-    Given I am at an AFTv5 page
+    Given I am logged in
+      And I am at an AFTv5 page
     When I click edit
 
   Scenario: Go to edit page
