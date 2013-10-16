@@ -142,7 +142,7 @@
 
 - Browser Label: firefox
 - bundle exec: cucumber --verbose --profile ci
-- Recipients: cmcmahon@wikimedia.org mgrover@wikimedia.org mobile-l@wikimedia.org mobile-tech@wikimedia.org zfilipin@wikimedia.org
+- Recipients: cmcmahon@wikimedia.org mgrover@wikimedia.org mobile-l@lists.wikimedia.org mobile-tech@wikimedia.org zfilipin@wikimedia.org
 - Repository URL: MobileFrontend@gerrit
 - Folder: tests/acceptance/
 
