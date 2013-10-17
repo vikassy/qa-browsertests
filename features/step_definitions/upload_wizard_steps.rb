@@ -54,13 +54,13 @@ Then(/^(.+) checkbox should be there$/) do |_|
   on(LearnPage).skip_element.when_present.should be_visible
 end
 Then(/^Describe page should open$/) do
-  @browser.url.should == on(DescribePage).class.url
+  @browser.url.should match /Special:UploadWizard/
 end
 Then(/^Learn page should appear$/) do
-  @browser.url.should == on(UploadWizardPage).class.url
+  @browser.url.should match /Special:UploadWizard/
 end
 Then(/^Release rights page should open$/) do
-  @browser.url.should == on(ReleaseRightsPage).class.url
+  @browser.url.should match /Special:UploadWizard/
 end
 Then(/^Select a media file to donate button should be there$/) do
   sleep 1
@@ -76,7 +76,7 @@ Then(/^Upload more files button should be there$/) do
   end
 end
 Then(/^Upload page should appear$/) do
-  @browser.url.should == on(UploadPage).class.url
+  @browser.url.should match /Special:UploadWizard/
 end
 Then(/^Use page should open$/) do
   @browser.url.should match /Special:UploadWizard/
