@@ -1,4 +1,4 @@
-@en.wikipedia.beta.wmflabs.org @test2.wikipedia.org
+@test2.wikipedia.org
 Feature: Print/Export menu Expand and Collapse
 
   Scenario: Check for Print/export section Expanded
