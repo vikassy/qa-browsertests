@@ -13,10 +13,10 @@ When(/^I click Next button at Describe page$/) do
   on(DescribePage).next_element.click
 end
 When(/^I click Next button at Learn page$/) do
-  on(LearnPage).next_element.click
+  on(LearnPage).next_element.when_present.click
 end
 When(/^I click Next button at Release rights page$/) do
-  on(ReleaseRightsPage).next_element.click
+  on(ReleaseRightsPage).next_element.when_present.click
 end
 When(/^I click This file is my own work$/) do
   on(ReleaseRightsPage).select_my_own_work
@@ -34,7 +34,7 @@ When(/^I navigate to Upload Wizard$/) do
   visit UploadWizardPage
 end
 When(/^thumbnail should be visible$/) do
-  on(ReleaseRightsPage).thumbnail_element.should be_visible
+  on(ReleaseRightsPage).thumbnail_element.when_present.should be_visible
 end
 When(/^upload file (.+)$/) do |file_name|
   require 'tempfile'
