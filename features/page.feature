@@ -1,4 +1,4 @@
-@en.wikipedia.beta.wmflabs.org @login @test2.wikipedia.org
+@en.wikipedia.beta.wmflabs.org @login @test2.wikipedia.org @chrome-bug
 Feature: Page
 
   Background:
