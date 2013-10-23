@@ -1,4 +1,4 @@
-@login @en.wikipedia.beta.wmflabs.org @phantomjs-bug
+@login @phantomjs-bug
 Feature: ProveIt
 
   Background:
