@@ -44,8 +44,7 @@ Feature: Page
       And watch element should not be there
 
   Scenario: Move existing page dialog
-    Given I am logged in
-      And I am starting a page to be moved
+    Given I am starting a page to be moved
       And I create the page to be moved
     When I click Move
     Then I should be on a page Move newly created page
@@ -56,8 +55,7 @@ Feature: Page
 
   @ie6-bug
   Scenario: Move existing page
-    Given I am logged in
-    And I am starting a page to be moved to a new name
+    Given I am starting a page to be moved to a new name
     And I have clicked Move on the newly created page
     When I make a new page name for the moved page
       And I click Move page
