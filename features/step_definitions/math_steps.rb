@@ -23,7 +23,7 @@ When(/^I click Preview$/) do
 end
 
 Then(/^the page should contain an img tag$/) do
-  on(EditPage).math_image_element.should exist
+  on(EditPage).math_image_element.when_present.should be_visible
 end
 
 Then(/^alt for that img should be (.+)$/) do |alt|
