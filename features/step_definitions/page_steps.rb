@@ -20,7 +20,10 @@ When(/^I click Save page button$/) do
   on(EditPage).save_element.when_present.click
 end
 When(/^I enter article text$/) do
-  on(EditPage).article_text = "Starting a new page using the URL"
+  on(EditPage) do |page|
+    page.article_text_element.when_present.click
+    page.article_text = "Starting a new page using the URL"
+  end
 end
 
 Then(/^Discussion link should be there$/) do
