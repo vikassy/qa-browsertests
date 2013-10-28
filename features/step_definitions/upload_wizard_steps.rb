@@ -24,7 +24,7 @@ When(/^I click Next button at Describe page$/) do
   on(DescribePage).next_element.click
 end
 When(/^I click Next button at Learn page$/) do
-  on(LearnPage).next_element.when_present.click
+  on(LearnPage).next_element.when_present(15).click
 end
 When(/^I click Next button at Release rights page$/) do
   on(ReleaseRightsPage).next_element.when_present.click
