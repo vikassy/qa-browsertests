@@ -21,13 +21,13 @@ When(/^I click Next button$/) do
 end
 When(/^I click Next button at Describe page$/) do
   sleep 1 # todo # I can not figure out at the moment how to make this work without using sleep
-  on(DescribePage).next_element.click
+  on(DescribePage).next_element.when_present.click
 end
 When(/^I click Next button at Learn page$/) do
   on(LearnPage).next_element.when_present(15).click
 end
 When(/^I click Next button at Release rights page$/) do
-  on(ReleaseRightsPage).next_element.when_present.click
+  on(ReleaseRightsPage).next_element.when_present(15).click
 end
 When(/^I click This file is my own work$/) do
   on(ReleaseRightsPage).select_my_own_work
@@ -81,10 +81,7 @@ Then(/^title text field should be there$/) do
   on(DescribePage).title_element.when_present.should be_visible
 end
 Then(/^Upload more files button should be there$/) do
-  on(UsePage) do |page|
-    page.upload_more_files_element.when_present
-    page.upload_more_files_element.should be_visible
-  end
+  on(UsePage).upload_more_files_element.when_present.should be_visible
 end
 Then(/^Upload page should appear$/) do
   @browser.url.should match /Special:UploadWizard/
