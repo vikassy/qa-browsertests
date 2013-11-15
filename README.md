@@ -16,6 +16,7 @@ If you're not using RVM to manage your Ruby versions, you will need to run the c
 
 Environment variables MEDIAWIKI_USER and MEDIAWIKI_PASSWORD are required for tests tagged `@login`. For local testing, create a test user on your local wiki and export the user and password as the values for those variables.
 For example:
+
     export MEDIAWIKI_USER=<username here> # Linux/Unix/Mac
     set MEDIAWIKI_USER=<username here> # Windows
 
