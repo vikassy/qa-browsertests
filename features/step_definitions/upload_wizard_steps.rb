@@ -14,14 +14,14 @@ Given(/^I am logged in$/) do
 end
 
 When(/^click button Continue$/) do
-  on(UploadPage).continue_element.when_present.click
+  on(UploadPage).continue_element.when_present(15).click
 end
 When(/^I click Next button$/) do
-  on(UploadWizardPage).next_element.when_present.click
+  on(UploadWizardPage).next_element.when_present(15).click
 end
 When(/^I click Next button at Describe page$/) do
   sleep 1 # todo # I can not figure out at the moment how to make this work without using sleep
-  on(DescribePage).next_element.when_present.click
+  on(DescribePage).next_element.when_present(15).click
 end
 When(/^I click Next button at Learn page$/) do
   on(LearnPage).next_element.when_present(15).click
