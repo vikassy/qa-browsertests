@@ -9,4 +9,4 @@
 # qa-browsertests top-level directory and at
 # https://git.wikimedia.org/blob/qa%2Fbrowsertests/HEAD/CREDITS
 #
-require 'mediawiki/selenium'
+require "mediawiki/selenium"

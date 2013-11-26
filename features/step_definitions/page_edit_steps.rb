@@ -20,7 +20,7 @@ When(/^I click the View History Link$/) do
 end
 
 Then(/^Edit controls should be there$/) do
-  if ENV['BROWSER_LABEL'] == 'internet_explorer_6' or ENV['BROWSER_LABEL'] == 'phantomjs'
+  if ENV["BROWSER_LABEL"] == "internet_explorer_6" or ENV["BROWSER_LABEL"] == "phantomjs"
     edit_page = EditPageIE6
   else
     edit_page = EditPage
@@ -50,7 +50,7 @@ Then(/^Edit link should be there$/) do
 end
 Then(/^edit page should open$/) do
   on(EditPage).save_element.when_present
-  @browser.url.should match Regexp.escape('&action=edit')
+  @browser.url.should match Regexp.escape("&action=edit")
 end
 Then(/^Preview button should be there$/) do
   on(EditPage).preview_element.when_present.should be_visible

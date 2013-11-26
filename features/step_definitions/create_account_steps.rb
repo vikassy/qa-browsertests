@@ -49,5 +49,5 @@ return (function() {
     }
     return ret;
 }) ();
-").should == ''
+").should == ""
 end

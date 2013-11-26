@@ -14,15 +14,15 @@ class DescribePage
 
   include URL
   def self.url
-    URL.url('Special:UploadWizard')
+    URL.url("Special:UploadWizard")
   end
   page_url url
 
-  text_field(:category, id: 'categories0')
+  text_field(:category, id: "categories0")
   textarea(:description, name: /^description/)
-  div(:next_parent, id: 'mwe-upwiz-stepdiv-details')
+  div(:next_parent, id: "mwe-upwiz-stepdiv-details")
   span(:next) do |page|
-    page.next_parent_element.span_element(text: 'Next')
+    page.next_parent_element.span_element(text: "Next")
   end
-  text_field(:title, id: 'title0')
+  text_field(:title, id: "title0")
 end

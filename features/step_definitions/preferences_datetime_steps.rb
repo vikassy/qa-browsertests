@@ -22,14 +22,14 @@ Then(/^I can select date format$/) do
   end
 end
 Then(/^I can see server time$/) do
-  @browser.text.should match Regexp.escape('Server time')
+  @browser.text.should match Regexp.escape("Server time")
 end
 Then(/^I can see local time$/) do
-  @browser.text.should match Regexp.escape('Local time')
+  @browser.text.should match Regexp.escape("Local time")
   on(PreferencesDateTimePage).local_time_span_element.should exist
 end
 Then(/^I can select my time zone$/) do
-  @browser.text.should match Regexp.escape('Time zone')
+  @browser.text.should match Regexp.escape("Time zone")
   on(PreferencesDateTimePage) do |page|
     page.time_offset_select_element.should exist
     page.other_offset_element.should exist

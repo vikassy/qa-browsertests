@@ -64,9 +64,9 @@ Then(/^I can enter and save text$/) do
     page.input_area_element.send_keys "Hello from #{@input_string}"
     page.post_feedback_element.when_present.click
     page.wait_until(10) do
-      page.text.include? 'Thanks!'
+      page.text.include? "Thanks!"
     end
-    page.text.should include 'Your post can be viewed on this feedback page.'
+    page.text.should include "Your post can be viewed on this feedback page."
     #ONLY ANONS GET 'CREATE ACCOUNT'/LOG IN MESSAGE
     page.create_account_element.should be_true
     page.log_in_element.should be_true
@@ -80,7 +80,7 @@ Then(/^I have links to Learn more and View Article$/) do
 end
 Then(/^I see a floating text window with Learn more link$/) do
   on(AFTv5Page) do |page|
-    page.text.should include 'Wikipedia would like to hear what you think of this article. Share your feedback with the editors -- and help improve this page'
+    page.text.should include "Wikipedia would like to hear what you think of this article. Share your feedback with the editors -- and help improve this page"
     page.learn_more_element.should be_true
   end
 end

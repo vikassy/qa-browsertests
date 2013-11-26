@@ -30,15 +30,15 @@ Then(/^an Add new categories link is visible$/) do
 end
 
 Then(/^I am taken to the Special:Categories page$/) do
-  @browser.url.should match Regexp.escape('Special:Categories')
+  @browser.url.should match Regexp.escape("Special:Categories")
 end
 
 Then(/^I can click Cancel and click Add new category$/) do
   on(HotcatPage).cancel
-  step 'I click the Add a new category link'
+  step "I click the Add a new category link"
 end
 
 Then(/^I can click OK and click Add new category$/) do
   on(HotcatPage).ok
-  step 'I click the Add a new category link'
+  step "I click the Add a new category link"
 end

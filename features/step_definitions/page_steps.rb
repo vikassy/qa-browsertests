@@ -60,9 +60,9 @@ Given(/^I am starting a page to be moved$/)  do
 end
 
 Given(/^I create the page to be moved$/)  do
-  step 'I click link Create source'
-  step 'I enter article text'
-  step 'I click Save page button'
+  step "I click link Create source"
+  step "I enter article text"
+  step "I click Save page button"
 end
 
 When(/^I click Move$/) do
@@ -73,7 +73,7 @@ When(/^I click Move$/) do
 end
 
 Then(/^I should be on a page Move newly created page$/) do
-  @browser.url.should match Regexp.escape('Special:MovePage')
+  @browser.url.should match Regexp.escape("Special:MovePage")
   on(ArticlePage).page_text.should match Regexp.escape("Move page: #{@random_string}")
 end
 
@@ -102,10 +102,10 @@ Given(/^I am starting a page to be moved to a new name$/)  do
 end
 
 Given(/^I have clicked Move on the newly created page$/) do
-  step 'I click link Create source'
-  step 'I enter article text'
-  step 'I click Save page button'
-  step 'I click Move'
+  step "I click link Create source"
+  step "I enter article text"
+  step "I click Save page button"
+  step "I click Move"
 end
 
 When(/^I make a new page name for the moved page$/) do
@@ -128,7 +128,7 @@ Then(/^I should have a link to the old page title and a link to the new page tit
 end
 
 Then(/^I should see the text A redirect has been created$/) do
-  on(ArticlePage).page_text.should match Regexp.escape('A redirect has been created')
+  on(ArticlePage).page_text.should match Regexp.escape("A redirect has been created")
 end
 
 Then(/^the the new page should have the correct text$/) do

@@ -14,19 +14,19 @@ Given(/^I am at Log in page$/) do
 end
 
 When(/^I log in with incorrect password$/) do
-  on(LoginPage).login_with(ENV['MEDIAWIKI_USER'], 'incorrect password')
+  on(LoginPage).login_with(ENV["MEDIAWIKI_USER"], "incorrect password")
 end
 When(/^I log in with incorrect username$/) do
-  on(LoginPage).login_with('incorrect username', ENV['MEDIAWIKI_PASSWORD'])
+  on(LoginPage).login_with("incorrect username", ENV["MEDIAWIKI_PASSWORD"])
 end
 When(/^I log in without entering credentials$/) do
-  on(LoginPage).login_with('', '')
+  on(LoginPage).login_with("", "")
 end
 When(/^I log in without entering password$/) do
-  on(LoginPage).login_with(ENV['MEDIAWIKI_USER'], '')
+  on(LoginPage).login_with(ENV["MEDIAWIKI_USER"], "")
 end
 When(/^Log in as (.+)$/) do |username|
-  on(LoginPage).login_with(username, ENV['MEDIAWIKI_PASSWORD'])
+  on(LoginPage).login_with(username, ENV["MEDIAWIKI_PASSWORD"])
 end
 
 Then(/^feedback should be (.+)$/) do |feedback|
@@ -39,7 +39,7 @@ Then(/^Log in element should be there$/) do
   on(LoginPage).login_element.should exist
 end
 Then(/^Log in page should open$/) do
-  @browser.url.should match Regexp.escape('Special:UserLogin')
+  @browser.url.should match Regexp.escape("Special:UserLogin")
 end
 Then(/^main page should open$/) do
   @browser.url.should == on(MainPage).class.url

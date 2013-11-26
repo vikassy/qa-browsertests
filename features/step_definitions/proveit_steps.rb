@@ -39,30 +39,30 @@ end
 
 When(/^I enter new reference data$/) do
   on(ProveItPage) do |page|
-    page.new_title='ProveIt Automated Test Reference'
-    page.new_url='www.canyouproveit.com'
+    page.new_title="ProveIt Automated Test Reference"
+    page.new_url="www.canyouproveit.com"
   end
 end
 
 When(/^I enter updated reference data$/) do
   on(ProveItPage) do |page|
-    page.edit_title='ProveIt Automated Test Reference - updated'
-    page.edit_url='www.canyouproveit.com - updated'
+    page.edit_title="ProveIt Automated Test Reference - updated"
+    page.edit_url="www.canyouproveit.com - updated"
   end
 end
 
 Then(/^I see the new reference in the list$/) do
-  on(ProveItPage).refs_table.should include 'ProveIt Automated Test Reference'
+  on(ProveItPage).refs_table.should include "ProveIt Automated Test Reference"
 end
 
 Then(/^I see the updated reference in the list$/) do
-  on(ProveItPage).refs_table.should include 'ProveIt Automated Test Reference - updated'
+  on(ProveItPage).refs_table.should include "ProveIt Automated Test Reference - updated"
 end
 
 Then(/^I see the new reference in the page editor$/) do
-  on(RandomPage).editor_text.should include 'ProveIt Automated Test Reference'
+  on(RandomPage).editor_text.should include "ProveIt Automated Test Reference"
 end
 
 Then(/^I see the updated reference in the page editor$/) do
-  on(RandomPage).editor_text.should include 'ProveIt Automated Test Reference - updated'
+  on(RandomPage).editor_text.should include "ProveIt Automated Test Reference - updated"
 end

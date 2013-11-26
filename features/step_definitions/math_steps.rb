@@ -10,8 +10,8 @@
 # https://git.wikimedia.org/blob/qa%2Fbrowsertests/HEAD/CREDITS
 #
 Given(/^I am editing page that does not exist$/) do
-  step 'I am at page that does not exist'
-  step 'I click link Create source'
+  step "I am at page that does not exist"
+  step "I click link Create source"
 end
 
 When(/^I type (.+)$/) do |write_text|
