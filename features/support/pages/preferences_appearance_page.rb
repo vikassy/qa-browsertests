@@ -20,7 +20,6 @@ class PreferencesAppearancePage
   checkbox(:collapse_sidebar_vector_check, id: "mw-input-wpvector-collapsiblenav")
   radio_button(:cologne_blue, id: "mw-input-wpskin-cologneblue")
   a(:css_link, text:"Custom CSS")
-  checkbox(:disable_caching_check, id: "mw-input-wpnocache")
   checkbox(:dont_show_aft_check, id: "mw-input-wparticlefeedback-disable")
   checkbox(:exclude_from_experiments_check, id: "mw-input-wpvector-noexperiments")
   checkbox(:hidden_categories_check, id: "mw-input-wpshowhiddencats")

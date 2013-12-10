@@ -44,7 +44,6 @@ end
 Then(/^I have advanced options checkboxes$/) do
   on(PreferencesAppearancePage) do |page|
     page.toc_check_element.should exist
-    page.disable_caching_check_element.should exist
     page.hidden_categories_check_element.should exist
     page.justify_paragraphs_check_element.should exist
     page.auto_number_check_element.should exist
