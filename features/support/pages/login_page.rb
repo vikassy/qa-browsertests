@@ -29,6 +29,6 @@ class LoginPage
   def login_with(username, password)
     self.username_element.when_present.send_keys(username)
     self.password_element.when_present.send_keys(password)
-    login
+    login_element.when_present.click
   end
 end
