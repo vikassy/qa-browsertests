@@ -17,7 +17,7 @@ When(/^I click the Search button$/) do
   on(SearchPage).search_button
 end
 When(/^I search for: (.+)$/) do |search_term|
-  on(SearchPage).search_input= search_term
+  on(SearchPage).search_input_element.when_present.send_keys(search_term)
 end
 
 Then(/^a list of suggested pages should appear$/) do
@@ -33,7 +33,7 @@ end
 
 When(/^I search for (.+)$/) do |text|
   on(RandomPage) do |page|
-    page.search_input = text
+    page.search_input_element.when_present.send_keys(text)
     page.search_button
   end
 end
