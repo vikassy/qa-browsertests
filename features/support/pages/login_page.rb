@@ -17,6 +17,7 @@ class LoginPage
 
   div(:feedback, class: "errorbox")
   button(:login, id: "wpLoginAttempt")
+  a(:logout_link, text: "Log out")
   text_field(:password, id: "wpPassword1")
   a(:password_strength, text: "password strength")
   a(:phishing, text: "phishing")
