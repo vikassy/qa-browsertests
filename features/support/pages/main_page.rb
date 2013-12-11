@@ -17,7 +17,9 @@ class MainPage
 
   a(:login, text: "Log in")
   a(:logout, text: "Log out")
+  a(:languages, text: "Languages")
   a(:my_sandbox, text: "My sandbox")
   a(:preferences, text: "Preferences")
+  a(:simple_english, title: "Simple English")
   a(:talk, text: "Talk")
 end

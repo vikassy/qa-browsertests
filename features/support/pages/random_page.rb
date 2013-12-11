@@ -16,6 +16,7 @@ class RandomPage
   page_url URL.url("Special:Random")
 
   span(:cog, title: "Language settings")
+  a(:community_portal, text: "Community portal")
   a(:create_a_book, text: "Create a book")
   a(:download_as_pdf, text: "Download as PDF")
   a(:download_the_file, text: "Download the file")
@@ -26,6 +27,7 @@ class RandomPage
   h3(:input_method_ime_list_title, class: "ime-list-title")
   ul(:input_method_language_list, class: "ime-language-list")
   div(:input_method_selector_menu, class: "imeselector-menu")
+  a(:interaction_section, text: "Interaction")
   text_field(:language_filter, id: "languagefilter")
   div(:language_settings_dialog, id: "language-settings-dialog")
   li(:main_page, id: "n-mainpage-description")
@@ -35,5 +37,7 @@ class RandomPage
   li(:uls_malayalam_inscript2_item, data_ime_inputmethod: "ml-inscript2")
   button(:search_button, id: "searchButton")
   text_field(:search_input, id: "searchInput")
+  a(:tools, text: "Tools")
   a(:uls_trigger, class: "uls-trigger")
+  a(:upload_file, text: "Upload file")
 end
