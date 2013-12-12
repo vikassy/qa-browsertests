@@ -11,7 +11,7 @@
 #
 Given(/^I am logged in$/) do
   visit(LoginPage).login_with(ENV["MEDIAWIKI_USER"], ENV["MEDIAWIKI_PASSWORD"])
-  on(LoginPage).logout_link_element.should be_visible
+  on(LoginPage).logout_link_element.when_present.should be_visible
 end
 
 When(/^click button Continue$/) do
