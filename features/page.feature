@@ -62,5 +62,5 @@ Feature: Page
     Then I should be on a page that says has been moved
       And I should see the text A redirect has been created
       And I should have a link to the old page title and a link to the new page title
-      And the the new page should have the correct text
+      And the new page should have the correct text
       And the old page should display a redirect to the new page
