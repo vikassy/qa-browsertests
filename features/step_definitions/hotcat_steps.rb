@@ -14,15 +14,15 @@ When(/^I click the Add a new category link$/) do
 end
 
 When(/^I click the Categories link$/) do
-  on(HotcatPage).categories_link
+  on(HotcatPage).categories_link_element.when_present.click
 end
 
 When(/^I click the Modify several categories button$/) do
-  on(HotcatPage).modify_several_categories
+  on(HotcatPage).modify_several_categories_element.when_present.click
 end
 
 Then(/^a Save button is visible$/) do
-  on(HotcatPage).save_button_element.should be_visible
+  on(HotcatPage).save_button_element.when_present.should be_visible
 end
 
 Then(/^an Add new categories link is visible$/) do
@@ -34,11 +34,11 @@ Then(/^I am taken to the Special:Categories page$/) do
 end
 
 Then(/^I can click Cancel and click Add new category$/) do
-  on(HotcatPage).cancel
+  on(HotcatPage).cancel_element.when_present.click
   step "I click the Add a new category link"
 end
 
 Then(/^I can click OK and click Add new category$/) do
-  on(HotcatPage).ok
+  on(HotcatPage).ok_element.when_present.click
   step "I click the Add a new category link"
 end
