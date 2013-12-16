@@ -40,13 +40,13 @@ end
 
 When(/^I click Move$/) do
   on(ArticlePage) do |page|
-    page.actions_link
-    page.move_link
+    page.actions_link_element.when_present.click
+    page.move_link_element.when_present.click
   end
 end
 
 When(/^I click Move page$/) do
-  on(MovePage).move_page
+  on(MovePage).move_page_element.when_present.click
 end
 
 When(/^I click Save page button$/) do
