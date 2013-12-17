@@ -30,7 +30,7 @@ class LoginPage
   def login_with(username, password)
     self.username_element.when_present.send_keys(username)
     self.password_element.when_present.send_keys(password)
-    login_element.fire_event('onfocus')
+    login_element.fire_event("onfocus")
     login_element.when_present.click
   end
 end

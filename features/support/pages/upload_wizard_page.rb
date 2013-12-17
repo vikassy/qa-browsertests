@@ -36,7 +36,7 @@ class UploadWizardPage
   radio(:cca_sa20, id: "license2_5")
   radio(:cca_sa3, id: "license2_0")
   button(:continue_button, xpath: "//div[2]/div[2]/div/button")
-  # todo # replace xpath # button(:continue_button, class: 'mwe-upwiz-button-next ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only')
+  # todo # replace xpath # button(:continue_button, class: "mwe-upwiz-button-next ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only")
   text_field(:date_created, id: "dateInput0")
   textarea(:description_field, name: "description1")
   a(:different_license, text: "Use a different license")
