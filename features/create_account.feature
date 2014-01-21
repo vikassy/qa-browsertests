@@ -9,7 +9,7 @@
 # qa-browsertests top-level directory and at
 # https://git.wikimedia.org/blob/qa%2Fbrowsertests/HEAD/CREDITS
 #
-@en.wikipedia.beta.wmflabs.org @test2.wikipedia.org
+@en.wikipedia.beta.wmflabs.org @test2.wikipedia.org @clean
 Feature: Create account
 
   Scenario Outline: Go to Create account page
