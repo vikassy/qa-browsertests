@@ -30,11 +30,11 @@ When(/^Log in as (.+)$/) do |username|
 end
 
 Then(/^feedback should be (.+)$/) do |feedback|
-    on(LoginPage) do |page|
-      page.feedback_element.when_present.click
-      page.feedback.should match Regexp.escape(feedback)
-    end
+  on(LoginPage) do |page|
+    page.feedback_element.when_present.click
+    page.feedback.should match Regexp.escape(feedback)
   end
+end
 Then(/^Log in element should be there$/) do
   on(LoginPage).login_element.should exist
 end
