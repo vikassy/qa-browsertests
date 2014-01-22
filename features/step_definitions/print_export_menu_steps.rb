@@ -11,8 +11,7 @@
 #
 Then(/^Print\/export section should be collapsed$/) do
   on(RandomPage) do |page|
-    sleep 1
-    page.create_a_book_element.should_not be_visible
+    page.create_a_book_element.when_not_visible.should_not be_visible
     page.download_as_pdf_element.should_not be_visible
     page.printable_version_element.should_not be_visible
   end
