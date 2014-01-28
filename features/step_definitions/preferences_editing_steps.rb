@@ -37,10 +37,6 @@ Then(/^I can select section editing by right clicking$/) do
   on(PreferencesEditingPage).edit_section_right_click_check_element.when_present.should exist
 end
 
-Then(/^I can select section editing via edit links$/) do
-  on(PreferencesEditingPage).edit_section_check_element.when_present.should exist
-end
-
 Then(/^I can select show edit toolbar$/) do
   on(PreferencesEditingPage).show_edit_toolbar_check_element.when_present.should exist
 end

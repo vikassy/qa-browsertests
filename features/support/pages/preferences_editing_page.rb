@@ -16,7 +16,6 @@ class PreferencesEditingPage
   page_url URL.url("Special:Preferences#mw-prefsection-rendering")
 
   select_list(:edit_area_font_style_select, id: "mw-input-wpeditfont")
-  checkbox(:edit_section_check, id: "mw-input-wpeditsection")
   checkbox(:edit_section_double_click_check, id: "mw-input-wpeditondblclick")
   checkbox(:edit_section_right_click_check, id: "mw-input-wpeditsectiononrightclick")
   checkbox(:enhanced_editing_toolbar_check, id: "mw-input-wpusebetatoolbar")
