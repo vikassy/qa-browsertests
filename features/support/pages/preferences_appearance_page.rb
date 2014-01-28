@@ -34,7 +34,6 @@ class PreferencesAppearancePage
   select_list(:size_select, id: "mw-input-wpimagesize")
   select_list(:threshold_select, id: "mw-input-wpstubthreshold")
   select_list(:thumb_select, id: "mw-input-wpthumbsize")
-  checkbox(:toc_check, id: "mw-input-wpshowtoc")
   select_list(:underline_select, id: "mw-input-wpunderline")
   radio_button(:vector, id: "mw-input-wpskin-vector")
 end
