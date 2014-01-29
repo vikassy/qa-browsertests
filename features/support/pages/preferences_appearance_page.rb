@@ -24,7 +24,6 @@ class PreferencesAppearancePage
   checkbox(:exclude_from_experiments_check, id: "mw-input-wpvector-noexperiments")
   checkbox(:hidden_categories_check, id: "mw-input-wpshowhiddencats")
   a(:javascript_link, text: "Custom JavaScript")
-  checkbox(:justify_paragraphs_check, id: "mw-input-wpjustify")
   radio_button(:leave_as_tex_radio, id: "mw-input-wpmath-3")
   radio_button(:mathjax_radio, id: "mw-input-wpmath-6")
   radio_button(:modern, id: "mw-input-wpskin-modern")
