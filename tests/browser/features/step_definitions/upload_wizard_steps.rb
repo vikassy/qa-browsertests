@@ -9,11 +9,6 @@
 # qa-browsertests top-level directory and at
 # https://git.wikimedia.org/blob/qa%2Fbrowsertests/HEAD/CREDITS
 #
-Given(/^I am logged in$/) do
-  visit(LoginPage).login_with(ENV["MEDIAWIKI_USER"], ENV["MEDIAWIKI_PASSWORD"])
-  on(LoginPage).logout_link_element.when_present(15).should be_visible
-end
-
 When(/^click button Continue$/) do
   on(UploadPage).continue_element.when_present(15).click
 end
