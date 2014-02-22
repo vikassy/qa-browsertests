@@ -20,7 +20,7 @@ When(/^I click the View History Link$/) do
 end
 
 Then(/^Edit controls should be there$/) do
-  if ENV["BROWSER_LABEL"] == "internet_explorer_6" or ENV["BROWSER_LABEL"] == "phantomjs"
+  if ENV["BROWSER"] == "internet_explorer_6" or ENV["BROWSER"] == "phantomjs"
     edit_page = EditPageIE6
   else
     edit_page = EditPage
