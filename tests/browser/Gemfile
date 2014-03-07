@@ -3,4 +3,5 @@
 
 source "https://rubygems.org"
 
-gem "mediawiki_selenium" , git: "https://github.com/vikassy/mediawiki-selenium.git"
+#gem "mediawiki_selenium" , git: "https://github.com/vikassy/mediawiki-selenium.git"
+gem "mediawiki_selenium" , path: "../../selenium"
