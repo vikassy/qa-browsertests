@@ -14,16 +14,16 @@ Given(/^I am at Log in page$/) do
 end
 
 When(/^I log in with incorrect password$/) do
-  on(LoginPage).login_with(ENV["MEDIAWIKI_USER"], "incorrect password")
+  on(LoginPage).login_with(ENV["MEDIAWIKI_USER"], "incorrect password", false)
 end
 When(/^I log in with incorrect username$/) do
-  on(LoginPage).login_with("incorrect username", ENV["MEDIAWIKI_PASSWORD"])
+  on(LoginPage).login_with("incorrect username", ENV["MEDIAWIKI_PASSWORD"], false)
 end
 When(/^I log in without entering credentials$/) do
-  on(LoginPage).login_with("", "")
+  on(LoginPage).login_with("", "", false)
 end
 When(/^I log in without entering password$/) do
-  on(LoginPage).login_with(ENV["MEDIAWIKI_USER"], "")
+  on(LoginPage).login_with(ENV["MEDIAWIKI_USER"], "", false)
 end
 When(/^Log in as (.+)$/) do |username|
   on(LoginPage).login_with(username, ENV["MEDIAWIKI_PASSWORD"])
